@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../weather-page/weather-page.css" />
+    <link rel="stylesheet" href="city-page.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+  </head>
+  <body>
+    <div>
+      <div class="search">
+        <input placeholder="Название населенного пункта , страны или региона" type="text" />
+        <img src="../weather-page/img/search.svg" alt="" />
+      </div>
+      <div class="language">
+        <div class="language__item language__item--active">RU</div>
+        <div class="language__item">UA</div>
+      </div>
+      <ul class="autocomplete hide">
+        <li class="autocomplete-item selected"><span>Город, </span> Страна, Регион</li>
+        <li class="autocomplete-item"><span>Город, </span> Страна, Регион</li>
+        <li class="autocomplete-item"><span>Город, </span> Страна, Регион</li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="city-card">
+        <div class="city-info">
+          <div class="city-name">Варшава</div>
+          <div class="city-temp">29°C</div>
+          <div class="city-text">Переменная облачность</div>
+        </div>
+        <div class="city-time">12:00, Пятница</div>
+        <div class="star-icon"><img src="img/icons/star-outlined.svg" alt="star" /></div>
+      </div>
+      <div class="hour-forecast">
+        <div class="hour-forecast-title">
+          <img src="img/icons/clock-circle-outlined.svg" alt="" />
+          <div>Почасовой прогноз</div>
+        </div>
+        <div class="hour-forecast-items">
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">Сейчас</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">12:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">13:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">14:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">15:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/sun.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">16:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">17:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">18:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">19:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">19:55</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/sunset.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="hour-forecast-item">
+            <div class="hour-forecast-item-text">21:00</div>
+            <div class="hour-forecast-item-icon">
+              <img src="img/icons/night.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details">
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+        <div class="details-item">
+          <div class="details-item-title">
+            <img src="img/icons-details/temp.svg" alt="">
+            <div>Ощущается как</div>
+          </div>
+          <div class="details-item-main">29°C</div>
+          <div class="details-item-text">По ощущениям <br/>примерно так-же</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -25,21 +25,22 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 50px;
-  margin: 0 32px;
+  font-size: 2vh;
+  line-height: 4vh;
+  margin: 0 3vh;
 
 }
 
 .search img {
   cursor: pointer;
-  padding: 0 32px;
+  padding: 0 1.5vw;
+  height: 55%;
 }
 
 .language {
   margin: 0 0;
   position: absolute;
-  right: 80px;
+  right: 4vw;
   top: 3vh;
   display: flex;
   align-items: center;
@@ -60,6 +61,7 @@
   font-size: 20px;
   line-height: 5vh;
   color: #9fbed4;
+  cursor: pointer;
 }
 
 .language__item--active {
@@ -68,10 +70,10 @@
 }
 
 .weather-wrapper {
-  /* display: flex;
-  justify-content: center; */
+  width: 90vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  grid-template-columns: 25% 25% 25% 25%;
   margin: 18vh 5vw 10vh;
 }
 
@@ -79,10 +81,11 @@
   font-family: "Mulish", sans-serif;
   text-align: center;
   color: #fff;
-  max-width: 422px;
+  width: 21vw;
   max-height: 713px;
   background-repeat: no-repeat;
   background-image: url("img/bg1.png");
+  background-size: 65vh;
   background-position: left 50% top 0;
   box-shadow: 0px 26.5818px 28.9983px -12.8882px rgba(0, 0, 0, 0.12);
   border-radius: 30px;
@@ -225,7 +228,7 @@
 .add-item {
   font-family: "Mulish", sans-serif;
   color: #fff;
-  max-width: 422px;
+  width: 21vw;
   max-height: 713px;
   box-shadow: 0px 26.5818px 28.9983px -12.8882px rgba(0, 0, 0, 0.12);
   border-radius: 30px;
@@ -235,6 +238,7 @@
   justify-content: center;
   align-items: center;
   border: 1px dashed #6596b9;
+  cursor: pointer;
 }
 
 .add-item-text {
@@ -262,17 +266,17 @@
   width: 46%;
   /* height: 8vh; */
   left: 50%;
-  top: 10vh;
-  padding: 27px 0;
+  top: 11vh;
+  padding: 2.5vh 0;
 }
 
 .autocomplete-item {
   font-family: 'Mulish';
   font-weight: 400;
-  font-size: 24px;
-  line-height: 50px;
-  padding-left: 32px;
-  height: 50px;
+  font-size: 3vh;
+  line-height: 3vh;
+  padding-left: 3vh;
+  height: 5vh;
 }
 
 .autocomplete-item span {
