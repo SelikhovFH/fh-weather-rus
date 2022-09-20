@@ -70,12 +70,7 @@
 .weather-wrapper {
   display: flex;
   justify-content: center;
-  width: 90%;
-  position: absolute;
-  top: 18vh;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin: 18vh 5vw 10vh;
 }
 
 .weather-item {
@@ -288,4 +283,22 @@
 .autocomplete-item:hover {
   background: #9fbed4;
   cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.pagination img:not(:last-child, :first-child) {
+  margin: 0 4px;
+}
+
+.pagination img:last-child {
+  margin: 0 20px;
+}
+
+.pagination img:first-child {
+  margin: 0 20px;
 }
