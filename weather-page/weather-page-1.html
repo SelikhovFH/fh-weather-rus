@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Page1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="weather-page.css" />
     <link rel="stylesheet" href="../normalize.css" />
   </head>
-  <body class="dark-backgrounds">
+  <body>
     <div>
       <div class="search">
         <input placeholder="Название населенного пункта , страны или региона" type="text" />
@@ -24,7 +24,7 @@
         <div class="language__item language__item--active">RU</div>
         <div class="language__item">UA</div>
       </div>
-      <ul class="autocomplete">
+      <ul class="autocomplete hide">
         <li class="autocomplete-item selected"><span>Город, </span> Страна, Регион</li>
         <li class="autocomplete-item"><span>Город, </span> Страна, Регион</li>
         <li class="autocomplete-item"><span>Город, </span> Страна, Регион</li>
@@ -185,10 +185,61 @@
         </div>
         <button class="weather-item-button">Подробнее</button>
       </div>
-      <div class="add-item">
+      <div class="weather-item">
+        <div class="weather-item-city">Барселона</div>
+        <div class="weather-item-time">Вторник, 11:00</div>
+        <div class="weather-item-temp">29</div>
+        <div class="weather-item-text">Переменная облачность</div>
+        <div class="weather-item-hours">
+          <div class="weather-item-hour">
+            <div class="weather-item-hour-text">Сейчас</div>
+            <div class="weather-item-hour-icon">
+              <img src="img/icons/sun.svg" alt="sunny" />
+              <div>29°C</div>
+            </div>
+          </div>
+          <div class="weather-item-hour">
+            <div class="weather-item-hour-text">12:00</div>
+            <div class="weather-item-hour-icon">
+              <img src="img/icons/cloud.svg" alt="cloudy" />
+              <div>30°C</div>
+            </div>
+          </div>
+          <div class="weather-item-hour">
+            <div class="weather-item-hour-text">13:00</div>
+            <div class="weather-item-hour-icon">
+              <img src="img/icons/cloudy.svg" alt="cloudy" />
+              <div>32°C</div>
+            </div>
+          </div>
+          <div class="weather-item-hour">
+            <div class="weather-item-hour-text">14:00</div>
+            <div class="weather-item-hour-icon">
+              <img src="img/icons/rainy.svg" alt="rainy" />
+              <div>23°C</div>
+            </div>
+          </div>
+        </div>
+        <div class="weather-item-info">
+          <div class="weather-item-info-segment">
+            <div class="weather-item-info-bold">20%</div>
+            <div class="weather-item-info-regular">Ветер</div>
+          </div>
+          <div class="weather-item-info-segment">
+            <div class="weather-item-info-bold">20%</div>
+            <div class="weather-item-info-regular">Влажность</div>
+          </div>
+          <div class="weather-item-info-segment">
+            <div class="weather-item-info-bold">15%</div>
+            <div class="weather-item-info-regular">Осадки</div>
+          </div>
+        </div>
+        <button class="weather-item-button">Подробнее</button>
+      </div>
+      <!-- <div class="add-item">
         <img class="plus-icon" src="img/plus.svg" alt="add" />
         <div class="add-item-text">Добавить место</div>
-      </div>
+      </div> -->
     </main>
     <div class="pagination">
       <img src="img/pagination/arrow-left.svg" alt="left" />
