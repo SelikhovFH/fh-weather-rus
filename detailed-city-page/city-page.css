@@ -11,6 +11,8 @@
   font-family: "Mulish", sans-serif;
 }
 
+/* City card */
+
 .city-card {
   width: 100%;
   height: 55vh;
@@ -64,6 +66,8 @@
   right: 2vw;
   top: 3vh;
 }
+
+/* Hour forecast */
 
 .hour-forecast {
   margin-top: 8vh;
@@ -120,6 +124,8 @@
   margin-bottom: 20px;
 }
 
+/* Details cards */
+
 .details {
   margin-top: 8vh;
   width: 100%;
@@ -130,6 +136,7 @@
 }
 
 .details-item {
+  position: relative;
   width: 22vw;
   height: 22vw;
   border-radius: 30px;
@@ -143,23 +150,246 @@
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 5vh;
+  font-size: 4vh;
   margin-top: 16%;
 }
 
+.details-item-title img {
+  margin-right: 10px;
+}
+
+.details-item-title div {
+  text-align: center;
+}
+
 .details-item-main {
-  font-weight: 300;
-  font-size: 10vh;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  font-size: 8vh;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.details-item-text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 200;
+  font-size: 2.5vh;
+  line-height: 30px;
   text-align: center;
   margin-top: 8%;
 }
 
-.details-item-text {
-  font-family: 'Mulish', sans-serif;
-  font-weight: 300;
-  font-size: 3vh;
-  line-height: 30px;
-  text-align: center;
-  margin-top: 8%;
+/* Compass */
 
+.compass-wrapper {
+  position: relative;
+  height: 12vw;
+}
+
+.compass-ellipse {
+  height: 12vw;
+}
+
+.compass-top {
+  /* height: 1vh; */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.compass-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.compass-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.compass-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.compass-letter {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: "Mulish";
+  font-weight: 500;
+  font-size: 1vw;
+}
+
+.compass-south {
+  top: 10%;
+  left: 50%;
+}
+
+.compass-north {
+  bottom: 0;
+  left: 50%;
+}
+
+.compass-west {
+  top: 50%;
+  left: 10%;
+}
+
+.compass-east {
+  top: 50%;
+  right: 3%;
+}
+
+.compass-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vw;
+  line-height: 2vw;
+  text-align: center;
+}
+
+.compass-wind {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* ! Rotate wind direction there */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.compass-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.compass-arrow-back {
+  height: 2.5vw;
+  transform: translateY(240%) rotate(-135deg);
+  position: absolute;
+}
+
+.compass-arrow-front {
+  height: 2.5vw;
+  transform: translateY(-200%) rotate(-135deg);
+}
+
+/* UV-index */
+
+.uv-index-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uv-index-text {
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 3.5vh;
+  text-align: start;
+}
+
+.uv-index-grade {
+  position: relative;
+  margin-top: 4vh;
+  height: 3vw;
+  width: 17vw;
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    #68d548 0%,
+    #91d83e 12.5%,
+    #c4d316 21.88%,
+    #e8d807 32.81%,
+    #f9c301 44.27%,
+    #f6a90b 52.6%,
+    #fb7f29 61.46%,
+    #f9692f 72.92%,
+    #f54550 80.73%,
+    #d34bb7 88.02%,
+    #d255cd 97.4%,
+    #b860da 97.41%
+  );
+}
+
+.uv-index-grade-dot {
+  position: absolute;
+  transform: translateY(-50%);
+  
+  /* ! Move UV index dot there */
+  left: 0%;
+  
+  top: 50%;
+  height: 2vw;
+  width: 2vw;
+  border-radius: 2vw;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Sunrise time */
+
+.sunrise-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: -10%;
+}
+
+.sunrise-curved {
+  width: 100%;
+}
+
+.sunrise-straight {
+  position: absolute;
+
+  /* ! Move sunrise line there */
+  top: 50%;
+
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+}
+
+/* pressure */
+
+.pressure-wrapper {
+  position: relative;
+  height: 12vw;
+  margin-bottom: -15%;
+}
+
+.pressure-arrow-wrapper {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+
+  /* ! Rotate pressure level arrow there */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.pressure-arrow {
+  transform: translate(-2%,-30%) rotate(320deg);
+}
+
+.pressure-ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
