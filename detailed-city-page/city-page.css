@@ -1,0 +1,567 @@
+.wrapper {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 18vh auto 0px;
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+  padding-bottom: 8vh;
+}
+
+/* City card */
+
+.city-card {
+  width: 100%;
+  height: 55vh;
+  background-image: url("img/location-bg.png");
+  background-size: cover;
+  border-radius: 30px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.city-info {
+  position: absolute;
+  min-height: 70%;
+  width: 30vw;
+  left: 3vw;
+  top: 8vh;
+  background: rgba(236, 236, 236, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: 2vw 3vh;
+  font-weight: 300;
+  font-size: 9vh;
+  line-height: 12vh;
+}
+
+.city-text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 4vh;
+  line-height: 5vh;
+}
+
+.city-time {
+  max-width: min-content;
+  position: absolute;
+  right: 3vw;
+  bottom: 8vh;
+  background: rgba(236, 236, 236, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: 24px 56px;
+  font-weight: 300;
+  font-size: 5vh;
+  line-height: 6vh;
+  white-space: nowrap;
+}
+
+.star-icon {
+  position: absolute;
+  right: 2vw;
+  top: 3vh;
+}
+
+/* Hour forecast */
+
+.hour-forecast {
+  margin-top: 8vh;
+  width: 100%;
+  min-height: 40vh;
+  background: #627d95;
+  border-radius: 30px;
+}
+
+.hour-forecast-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+}
+
+.hour-forecast-title img {
+  margin: 4vh 1vh;
+}
+
+.hour-forecast-items {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5vw 4vh;
+}
+
+.hour-forecast-item {
+  width: 6vw;
+}
+
+.hour-forecast-item-icon {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(236, 236, 236, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+}
+
+.hour-forecast-item-icon div {
+  margin-top: 3vh;
+}
+
+.hour-forecast-item-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Details cards */
+
+.details {
+  margin-top: 8vh;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 1vh 0;
+}
+
+.details-item {
+  position: relative;
+  width: 22vw;
+  height: 22vw;
+  border-radius: 30px;
+  background-image: url("img/details-bg.png");
+  background-size: cover;
+  /* margin: 4px 0; */
+}
+
+.details-item-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 4vh;
+  margin-top: 16%;
+}
+
+.details-item-title img {
+  margin-right: 10px;
+}
+
+.details-item-title div {
+  text-align: center;
+}
+
+.details-item-main {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  font-size: 8vh;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.details-item-text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 200;
+  font-size: 2.5vh;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 8%;
+}
+
+/* Compass */
+
+.compass-wrapper {
+  position: relative;
+  height: 12vw;
+}
+
+.compass-ellipse {
+  height: 12vw;
+}
+
+.compass-top {
+  /* height: 1vh; */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.compass-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.compass-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.compass-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.compass-letter {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: "Mulish";
+  font-weight: 500;
+  font-size: 1vw;
+}
+
+.compass-south {
+  top: 10%;
+  left: 50%;
+}
+
+.compass-north {
+  bottom: 0;
+  left: 50%;
+}
+
+.compass-west {
+  top: 50%;
+  left: 10%;
+}
+
+.compass-east {
+  top: 50%;
+  right: 3%;
+}
+
+.compass-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vw;
+  line-height: 2vw;
+  text-align: center;
+}
+
+.compass-wind {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* ! Rotate wind direction there */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.compass-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.compass-arrow-back {
+  height: 2.5vw;
+  transform: translateY(240%) rotate(-135deg);
+  position: absolute;
+}
+
+.compass-arrow-front {
+  height: 2.5vw;
+  transform: translateY(-200%) rotate(-135deg);
+}
+
+/* UV-index */
+
+.uv-index-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uv-index-text {
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 3.5vh;
+  text-align: start;
+}
+
+.uv-index-grade {
+  position: relative;
+  margin-top: 4vh;
+  height: 3vw;
+  width: 17vw;
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    #68d548 0%,
+    #91d83e 12.5%,
+    #c4d316 21.88%,
+    #e8d807 32.81%,
+    #f9c301 44.27%,
+    #f6a90b 52.6%,
+    #fb7f29 61.46%,
+    #f9692f 72.92%,
+    #f54550 80.73%,
+    #d34bb7 88.02%,
+    #d255cd 97.4%,
+    #b860da 97.41%
+  );
+}
+
+.uv-index-grade-dot {
+  position: absolute;
+  transform: translateY(-50%);
+
+  /* ! Move UV index dot there */
+  left: 0%;
+
+  top: 50%;
+  height: 2vw;
+  width: 2vw;
+  border-radius: 2vw;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Sunrise time */
+
+.sunrise-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: -4vw;
+}
+
+.sunrise-curved {
+  width: 100%;
+}
+
+.sunrise-straight {
+  position: absolute;
+
+  /* ! Move sunrise line there */
+  top: 50%;
+
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+}
+
+/* pressure */
+
+.pressure-wrapper {
+  position: relative;
+  height: 12vw;
+  margin: -5% 0 -15%;
+}
+
+.pressure-arrow-wrapper {
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  top: 65%;
+  left: 50%;
+
+  /* ! Rotate pressure level arrow there */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.pressure-arrow {
+  position: absolute;
+
+  height: 3.5vw;
+  transform: translate(-50%, -63%) rotate(320deg);
+}
+
+.pressure-ellipse {
+  height: 10vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Graphs */
+
+.graph {
+  position: relative;
+  margin-top: 8vh;
+  width: 100%;
+  height: 87vh;
+  background: #9fbed4;
+  border-radius: 30px;
+}
+
+.graph-header {
+  position: relative;
+  width: 100%;
+  height: 14vh;
+}
+
+.graph-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+}
+
+.graph-title img {
+  height: 2.5vw;
+  margin-right: 1vw;
+}
+/* Switcher */
+.graph-switcher {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  width: 12vw;
+  height: 3vw;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  border-radius: 30px;
+}
+
+.graph-switcher-icon {
+  width: 33.3333333%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #6596b9;
+}
+
+.graph-switcher-icon:first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.graph-switcher-icon:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.graph-switcher-icon:not(first-child) {
+  border-left: none;
+}
+
+.graph-switcher-icon img {
+  filter: invert(62%) sepia(13%) saturate(1192%) hue-rotate(162deg) brightness(88%) contrast(89%);
+  height: 2vw;
+}
+
+.graph-switcher-icon-active {
+  background-color: #6596b9;
+}
+
+.graph-switcher-icon-active img {
+  filter: invert(0%) sepia(76%) saturate(0%) hue-rotate(2deg) brightness(110%) contrast(101%);
+}
+
+.graph-tooltip {
+  position: absolute;
+  min-width: 10vw;
+  max-width: 205px;
+  background: #fff;
+  border-radius: 30px;
+  color: #000;
+  font-family: "Mulish", sans-serif;
+  padding: 40px 1.5vw;
+}
+
+.graph-tooltip-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vw;
+  font-weight: 600;
+}
+
+.graph-tooltip-title img {
+  height: 2vw;
+}
+
+.graph-tooltip-text {
+  font-size: 16px;
+  /* width: 100%; */
+}
+
+.graph-tooltip-text span {
+  color: #9c9c9c;
+}
+
+.graph-tooltip-body {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.graph-img {
+  height: 67vh;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.graph-img img {
+  height: 100%;
+}
+
+.graph-tooltip-grade {
+  position: relative;
+  height: 1.5vh;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #68d548 0%,
+    #91d83e 12.5%,
+    #c4d316 21.88%,
+    #e8d807 32.81%,
+    #f9c301 44.27%,
+    #f6a90b 52.6%,
+    #fb7f29 61.46%,
+    #f9692f 72.92%,
+    #f54550 80.73%,
+    #d34bb7 88.02%,
+    #d255cd 97.4%,
+    #b860da 97.41%
+  );
+  border-radius: 30px;
+  margin-bottom: 15%;
+}
+
+.graph-tooltip-grade-dot {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  height: 1.3vh;
+  width: 1.3vh;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-50%);
+}
