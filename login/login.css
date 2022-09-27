@@ -5,9 +5,6 @@ font-family: 'Open Sans', sans-serif;
 */
 
 body {
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
   background-color: #000;
   background-image: url("background.svg");
 }
@@ -21,27 +18,24 @@ body {
 }
 
 .login-wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 868px;
-  height: 697px;
 
   background: #262626;
   border-radius: 30px;
 }
 
 .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 72px;
 }
 
 .switcher {
   position: relative;
-  left: 50%;
-  top: 270px;
-  transform: translateX(-50%);
   display: flex;
   width: 446px;
+  margin-bottom: 62px;
 }
 
 .switcher-text {
@@ -87,21 +81,18 @@ body {
 }
 
 .input-wrapper {
-  position: absolute;
-  top: 400px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
 .input {
   background-color: transparent;
   width: 500px;
-  height: 64px;
   border-radius: 30px;
   border: 1px solid #0185ff;
-  padding: 0 34px;
+  padding: 24px 34px;
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -119,16 +110,12 @@ body {
 }
 
 .btn {
-  position: absolute;
-  bottom: -32px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 17px 105px;
+  margin-bottom: -30px;
   cursor: pointer;
   color: #fff;
-  width: 274px;
-  height: 64px;
   background: linear-gradient(263.93deg, #0185ff 7.17%, #076ac6 94.81%);
-  border-radius: 29px;
+  border-radius: 30px;
   border: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
