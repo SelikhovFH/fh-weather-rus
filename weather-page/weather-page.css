@@ -33,6 +33,7 @@
   border-radius: 30px;
   margin: 0 0;
   background: #fff;
+  z-index: 20;
 }
 
 .search input {
@@ -249,7 +250,6 @@
   font-family: "Mulish", sans-serif;
   color: #fff;
   width: 100%;
-  box-shadow: 0px 26.5818px 28.9983px -12.8882px rgba(0, 0, 0, 0.12);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -268,10 +268,18 @@
 }
 
 .dark-background {
-  background: rgba(79, 78, 78, 0.49);
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  z-index: 10;
+  background-color: rgba(79, 78, 78, 0.49);
 }
 
 .autocomplete {
+  display: none;
   z-index: 10;
   list-style: none;
   background: #ffffff;
@@ -285,6 +293,7 @@
   left: 50%;
   top: 100%;
   padding: 27px 0;
+  z-index: 20;
 }
 
 .autocomplete-item {
@@ -323,4 +332,15 @@
 .pagination img:first-child {
   margin: 0 20px;
   cursor: pointer;
+}
+
+
+
+.search:focus-within .autocomplete {
+  display: block;
+}
+
+.search:focus-within + .dark-background {
+  display: block;
+  overflow: hidden;
 }
