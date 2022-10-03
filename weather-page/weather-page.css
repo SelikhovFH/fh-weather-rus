@@ -76,7 +76,7 @@
   justify-content: space-between;
 }
 
-.language__item {
+.button-language {
   border: 1px solid #6596b9;
   border-radius: 30px;
   text-align: center;
@@ -89,9 +89,26 @@
   line-height: 24px;
   color: #9fbed4;
   cursor: pointer;
+  background: #fff;
 }
 
-.language__item--active {
+.button-language:hover {
+  filter: drop-shadow(2px 3px 9px rgba(101, 150, 185, 0.7));
+}
+
+.button-language:active {
+  background: #6596b9;
+  color: #ffffff;
+  filter: none;
+}
+
+.button-language:disabled {
+  background: #CFDAE2;
+  color: #ADB9C2;
+  box-shadow: none;
+}
+
+.button-language--selected {
   background: #6596b9;
   color: #ffffff;
 }
@@ -240,12 +257,10 @@
 }
 
 .weather-item-button {
-  /* width: 193px; */
-  /* height: 57px; */
-  /* position: absolute; */
-  /* bottom: -28px; */
-  /* left: 50%; */
   transform: translateY(50%);
+}
+
+.button-primary {
   padding: 16px 40px;
   cursor: pointer;
 
@@ -257,6 +272,21 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
+}
+
+.button-primary:hover {
+  background: #6596b9;
+  box-shadow: 0px 4px 22px rgba(101, 150, 185, 0.7);
+}
+
+.button-primary:active {
+  background: #4F7591;
+}
+
+.button-primary:disabled {
+  background: #CFDAE2;
+  color: #ADB9C2;
+  box-shadow: none;
 }
 
 .add-item {
@@ -387,20 +417,6 @@
 
 .subscription-input input::placeholder {
   color: #a19f9f;
-}
-
-.subscription-input button {
-  outline: none;
-  border: none;
-  padding: 16px 40px;
-  color: #fff;
-  background: #6596b9;
-  border: 1px solid #6596b9;
-  border-radius: 30px;
-  font-family: "Mulish", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 25px;
 }
 
 /* Footer */

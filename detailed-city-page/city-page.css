@@ -440,6 +440,7 @@
   align-items: center;
   background-color: #fff;
   border: 1px solid #6596b9;
+  cursor: pointer;
 }
 
 .graph-switcher-icon:first-child {
@@ -458,6 +459,14 @@
 
 .graph-switcher-icon img {
   filter: invert(62%) sepia(13%) saturate(1192%) hue-rotate(162deg) brightness(88%) contrast(89%);
+}
+
+.graph-switcher-icon:hover {
+  background-color: #6596b9;
+}
+
+.graph-switcher-icon:hover img {
+  filter: invert(0%) sepia(76%) saturate(0%) hue-rotate(2deg) brightness(110%) contrast(101%);
 }
 
 .graph-switcher-icon-active {
