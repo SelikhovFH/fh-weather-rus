@@ -106,6 +106,7 @@
   background: #CFDAE2;
   color: #ADB9C2;
   box-shadow: none;
+  cursor: default;
 }
 
 .button-language--selected {
@@ -287,6 +288,7 @@
   background: #CFDAE2;
   color: #ADB9C2;
   box-shadow: none;
+  cursor: d;
 }
 
 .add-item {
