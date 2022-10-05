@@ -1,10 +1,32 @@
 import React from "react";
 import Searchbar from "./../searchbar/Searchbar";
+import WeatherCard from "./WeatherCard";
+import arrowLeft from "../img/pagination/arrow-left.svg";
+import arrowRight from "../img/pagination/arrow-right.svg";
+import dotActive from "../img/pagination/dot-active.svg";
+import dot from "../img/pagination/dot.svg";
+import Subscription from "../subscription/Subscription";
+import Footer from "../footer/Footer";
 
 const WeatherPage = () => {
   return (
-    <div className="mx-[80px] flex flex-col items-center">
+    <div className='mx-[80px] flex flex-col items-center'>
       <Searchbar />
+      <div className='grid grid-cols-4 w-full gap-x-6 mb-20'>
+        <WeatherCard />
+        <WeatherCard />
+        <WeatherCard />
+        <WeatherCard />
+      </div>
+      <div className="flex justify-center mb-20">
+        <img className="mr-5 cursor-pointer" src={arrowLeft} alt='' />
+        <img className="mx-1" src={dotActive} alt='' />
+        <img className="mx-1" src={dot} alt='' />
+        <img className="mx-1" src={dot} alt='' />
+        <img className="ml-5 cursor-pointer" src={arrowRight} alt='' />
+      </div>
+      <Subscription/>
+      <Footer/>
     </div>
   );
 };

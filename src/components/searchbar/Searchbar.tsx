@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ButtonLanguage from "./ButtonLanguage";
+import ButtonPrimary from "../buttons/ButtonPrimary";
 import Logo from "../img/searchbar-logo.png";
 import SearchIcon from "../img/service-icons/search.svg";
 import Autocomplete from "./Autocomplete";
@@ -28,8 +28,8 @@ const Searchbar = () => {
 
 
       <div className='flex justify-between items-center'>
-        <ButtonLanguage text='RU' selected />
-        <ButtonLanguage text='UA' />
+        <ButtonPrimary text='RU' selected language />
+        <ButtonPrimary text='UA' disabled language />
       </div>
 
       <div
