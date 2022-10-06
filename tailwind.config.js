@@ -41,6 +41,7 @@ module.exports = {
       },
       borderRadius: {
         "primary": "30px",
+        "2.5xl": "1.25rem",
       },
       borderWidth: {
         "1px": "1px"
@@ -56,9 +57,7 @@ module.exports = {
       boxShadow: {
         'card-shadow': '0px 26.5818px 28.9983px -12.8882px rgba(0, 0, 0, 0.12)'
       },
-      borderRadius: {
-        "2.5xl": "1.25rem",
-      }
+
     },
   },
   plugins: [],
