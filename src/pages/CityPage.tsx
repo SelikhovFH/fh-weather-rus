@@ -13,13 +13,13 @@ const someHours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const CityPage = () => {
   return (
-    <div className="mx-[80px] flex flex-col items-center text-white">
+    <div className="mx-20 flex flex-col items-center text-white">
       <Searchbar />
       <div className=" w-full flex justify-between items-end py-24 px-24 rounded-primary font-Mulish relative bg-[url('/src/components/img/location-bg.png')] bg-center bg-cover mb-20">
-        <div className="bg-blured-grey backdrop-blur-sm rounded-primary py-8 px-14 font-light text-8xl leading-[120px]">
+        <div className="bg-blured-grey backdrop-blur-sm rounded-primary py-8 px-14 font-light text-8xl leading-tight">
           <div className="mb-4">Варшава</div>
           <div className="mb-4">29°C</div>
-          <div className="font-medium text-[40px] leading-[50px]">
+          <div className="font-medium text-4.5xl leading-tight">
             Переменная облачность
           </div>
         </div>
@@ -29,7 +29,7 @@ const CityPage = () => {
         <img className="absolute right-8 top-5" src={starOutlined} alt="star" />
       </div>
 
-      <div className="w-full rounded-primary bg-[#627d95] py-10 px-[72px]">
+      <div className="w-full rounded-primary bg-gray-blue py-10 px-18 mb-20">
         <div className="flex justify-center items-center mb-16 text-4xl">
           <img className="mr-2.5" src={calendar} alt="img" />
           <div className="font-Mulish">Почасовой прогноз</div>
@@ -46,7 +46,8 @@ const CityPage = () => {
           ))}
         </div>
       </div>
-      {/* <Tooltip /> */}
+
+      <Tooltip />
       <GraphSwitcher />
       {/* <Widgets/> */}
       <Subscription />

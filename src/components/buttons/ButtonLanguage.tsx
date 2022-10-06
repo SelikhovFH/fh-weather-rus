@@ -1,15 +1,15 @@
-import React, { FC } from "react";
-import { ButtonProps } from "../../types";
+import React, {FC} from 'react';
+import {ButtonProps} from '../../types';
 
-const ButtonLanguage: FC<ButtonProps> = ({ disabled, text, selected }) => {
+const ButtonLanguage: FC<ButtonProps> = ({disabled, text, selected}) => {
   return (
     <button
       disabled={disabled}
       className={`border-[1px] rounded-primary text-center 
-      disabled:bg-[#CFDAE2] disabled:border-[#CFDAE2] disabled:text-[#ADB9C2] disabled:drop-shadow-none py-3 px-9 font-Montserrat font-[300] text-xl ml-6 ${
+      disabled:bg-disabled-grey disabled:border-disabled-grey disabled:text-disabled-grey-dark disabled:drop-shadow-none py-3 px-9 font-Montserrat font-light text-xl ml-6 ${
         selected
-          ? "text-white bg-[#6596b9] border-[#6596b9]"
-          : "text-[#9fbed4] bg-white hover:drop-shadow-button"
+          ? 'text-white bg-primary-blue border-primary-blue'
+          : 'text-light-blue bg-white hover:drop-shadow-button'
       }`}>
       {text}
     </button>

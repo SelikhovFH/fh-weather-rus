@@ -16,13 +16,13 @@ const GraphSwitcher = () => {
   ];
 
   return (
-    <div className="-mt-80 flex justify-around">
+    <div className="flex justify-around">
       {icons.map((icon, i) => (
         <img
           onClick={() => setSomeSelectedGraph(i)}
           key={i}
-          className={`py-2.5 px-6 border-[#6596b9] first:rounded-l-primary first:border-r-[1px] last:border-l-[1px] last:rounded-r-primary transition-colors cursor-pointer ${
-            someSelectedGraph === i ? 'bg-[#6596b9]' : 'bg-white'
+          className={`py-2.5 px-6 border-primary-blue first:rounded-l-primary first:border-r-1px last:border-l-1px last:rounded-r-primary transition-colors cursor-pointer ${
+            someSelectedGraph === i ? 'bg-primary-blue' : 'bg-white'
           }`}
           src={someSelectedGraph === i ? icon.light : icon.dark}
           alt="img"
