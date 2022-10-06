@@ -1,8 +1,7 @@
 export interface ButtonProps {
   text: string;
-  language?: boolean;
   selected?: boolean;
-  disabled?: boolean
+  disabled?: boolean;
 }
 
 export interface AutocompleteProps {

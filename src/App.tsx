@@ -1,7 +1,7 @@
 import React from "react";
-import CityPage from "./components/detailed-city-page/CityPage";
-import LoginPage from './components/login/LoginPage';
-import WeatherPage from './components/weather-page/WeatherPage';
+import CityPage from "./pages/CityPage";
+import LoginPage from './pages/LoginPage';
+import WeatherPage from './pages/WeatherPage';
 
 const App = () => {
   return (

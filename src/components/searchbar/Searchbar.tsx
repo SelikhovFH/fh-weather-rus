@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import ButtonPrimary from "../buttons/ButtonPrimary";
 import Logo from "../img/searchbar-logo.png";
 import SearchIcon from "../img/service-icons/search.svg";
 import Autocomplete from "./Autocomplete";
+import ButtonLanguage from "../buttons/ButtonLanguage";
 
 const Searchbar = () => {
   const [input, setInput] = useState("");
 
   return (
     <div className='pt-8 pb-20 w-full flex justify-between'>
-
       <div className='flex items-center'>
         <img src={Logo} alt='' />
       </div>
@@ -26,18 +25,15 @@ const Searchbar = () => {
         <Autocomplete show={!!input.length} />
       </div>
 
-
       <div className='flex justify-between items-center'>
-        <ButtonPrimary text='RU' selected language />
-        <ButtonPrimary text='UA' disabled language />
+        <ButtonLanguage text='RU' selected />
+        <ButtonLanguage text='UA' />
       </div>
 
       <div
         className={`${
           input.length ? "" : "hidden"
-        } w-screen h-screen fixed top-0 left-0 bg-[#4F4E4E7D] bg-opacity-50 z-10`}>
-      </div>
-      
+        } w-screen h-screen fixed top-0 left-0 bg-[#4F4E4E7D] bg-opacity-50 z-10`}></div>
     </div>
   );
 };
