@@ -31,6 +31,9 @@ module.exports = {
         "128": "32rem",
         "192": "48rem"
       },
+      translate: {
+        "center": "-50%"
+      },
       maxWidth: {
         "xxs": "12rem",
       },
