@@ -34,7 +34,8 @@ const CityPage = () => {
           <img className='mr-2.5' src={calendar} alt='img' />
           <div className='font-Mulish'>Почасовой прогноз</div>
         </div>
-        <div className='flex justify-around'>
+
+        <div className='grid grid-cols-11 grid-rows-1 gap-4'>
           {someHours.map((item, i) => (
             <div key={i} className='hour-forecast-item font-Mulish'>
               <div className='font-light text-2xl text-center mb-5'>Сейчас</div>

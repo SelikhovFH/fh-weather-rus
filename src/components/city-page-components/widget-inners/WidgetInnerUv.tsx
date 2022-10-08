@@ -8,7 +8,7 @@ const WidgetInnerUv: FC<WidgetUvProps> = ({ move }) => {
         0 <br />
         Низкий
       </div>
-      <div className='mt-10 relative rounded-primary bg-grade-gradient w-80 h-14'>
+      <div className='mt-10 relative rounded-primary bg-grade-gradient w-4/5 h-14'>
         <div
           className={
             `absolute translate-y-center translate-x-center top-1/2 h-10 w-10 bg-white bg-opacity-70 rounded-primary ${move}`

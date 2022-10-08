@@ -12,7 +12,7 @@ export interface AutocompleteProps {
 
 export interface WidgetWrapperProps {
   children: JSX.Element;
-  // image: any;
+  titleImage: any;
   title: string;
 }
 

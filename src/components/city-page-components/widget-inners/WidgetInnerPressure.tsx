@@ -5,10 +5,10 @@ import { WidgetPressureProps } from '../../../types';
 
 const WidgetInnerPressure: FC<WidgetPressureProps> = ({ amount, rotate }) => {
   return (
-    <div className='mt-2 flex flex-col justify-center items-center h-2/3'>
-      <div className='relative w-2/3 h-full'>
+    <div className='mt-10 flex flex-col items-center h-full'>
+      <div className='relative w-2/3 h-2/5'>
         <img
-          className='h-full absolute top-1/2 left-1/2 translate-x-center translate-y-center'
+          className=' absolute top-1/2 left-1/2 translate-x-center translate-y-center'
           src={pressureEllipse}
           alt=''
         />
@@ -21,7 +21,7 @@ const WidgetInnerPressure: FC<WidgetPressureProps> = ({ amount, rotate }) => {
           />
         </div>
       </div>
-      <div className='-mt-10 font-light text-2xl text-center font-Open-Sans'>
+      <div className='-mt-4 font-light text-2xl text-center font-Open-Sans'>
         {amount} <br /> hpa
       </div>
     </div>

@@ -20,8 +20,7 @@
     "prettier/prettier": [
       "warn",
       {
-        "endOfLine": "auto",
-        "bracketSpacing": "true"
+        "endOfLine": "auto"
       }
     ]
   }
