@@ -7,8 +7,7 @@ import Subscription from '../components/subscription/Subscription';
 import Footer from '../components/footer/Footer';
 import Tooltip from '../components/city-page-components/Tooltip';
 import GraphSwitcher from '../components/city-page-components/GraphSwitcher';
-import WidgetBasic from '../components/city-page-components/WidgetBasic';
-
+import Widgets from '../components/city-page-components/Widgets';
 const someHours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const CityPage = () => {
@@ -47,18 +46,7 @@ const CityPage = () => {
           ))}
         </div>
       </div>
-
-      <div className='mb-20 w-full grid justify-items-center items-center grid-cols-4 grid-rows-2 gap-4'>
-        <WidgetBasic />
-        <WidgetBasic />
-        <WidgetBasic />
-        <WidgetBasic />
-        <WidgetBasic />
-        <WidgetBasic />
-        <WidgetBasic />
-        <WidgetBasic />
-      </div>
-
+      <Widgets />
       {/* <Tooltip /> */}
       {/* <GraphSwitcher /> */}
       <Subscription />

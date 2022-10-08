@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import {AutocompleteProps} from '../../types';
+import React, { FC } from 'react';
+import { AutocompleteProps } from '../../types';
 
 const someData = [
   'Paris, someeRegion, France',
@@ -7,7 +7,7 @@ const someData = [
   'Tokyo, someRegion, Japan',
 ];
 
-const Autocomplete: FC<AutocompleteProps> = ({show}) => {
+const Autocomplete: FC<AutocompleteProps> = ({ show }) => {
   return (
     <ul
       className={`${
@@ -16,8 +16,8 @@ const Autocomplete: FC<AutocompleteProps> = ({show}) => {
       {someData.map(item => (
         <li
           key={item}
-          className="font-Mulish font-normal text-2xl py-2.5 px-8 hover:bg-light-blue hover:text-white cursor-pointer">
-          <span className="font-bold">ЖирныйШрифт </span> {item}
+          className='font-Mulish font-normal text-2xl py-2.5 px-8 hover:bg-light-blue hover:text-white cursor-pointer'>
+          <span className='font-bold'>ЖирныйШрифт </span> {item}
         </li>
       ))}
     </ul>

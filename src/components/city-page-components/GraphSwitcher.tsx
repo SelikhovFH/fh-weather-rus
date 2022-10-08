@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import warmDark from '../img/service-icons/graph-switcher-icons/warm-dark.svg';
 import dropDark from '../img/service-icons/graph-switcher-icons/drop-dark.svg';
 import sunDark from '../img/service-icons/graph-switcher-icons/sun-dark.svg';
@@ -9,14 +9,14 @@ import sunLight from '../img/service-icons/graph-switcher-icons/sun-light.svg';
 const GraphSwitcher = () => {
   const [someSelectedGraph, setSomeSelectedGraph] = useState(0);
 
-  const icons: {dark: any; light: any}[] = [
-    {dark: warmDark, light: warmLight},
-    {dark: dropDark, light: dropLight},
-    {dark: sunDark, light: sunLight},
+  const icons: { dark: any; light: any }[] = [
+    { dark: warmDark, light: warmLight },
+    { dark: dropDark, light: dropLight },
+    { dark: sunDark, light: sunLight },
   ];
 
   return (
-    <div className="flex justify-around">
+    <div className='flex justify-around'>
       {icons.map((icon, i) => (
         <img
           onClick={() => setSomeSelectedGraph(i)}
@@ -25,7 +25,7 @@ const GraphSwitcher = () => {
             someSelectedGraph === i ? 'bg-primary-blue' : 'bg-white'
           }`}
           src={someSelectedGraph === i ? icon.light : icon.dark}
-          alt="img"
+          alt='img'
         />
       ))}
     </div>

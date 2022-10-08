@@ -1,7 +1,7 @@
-import React, {FC} from 'react';
-import {ButtonProps} from '../../types';
+import React, { FC } from 'react';
+import { ButtonProps } from '../../types';
 
-const ButtonLanguage: FC<ButtonProps> = ({disabled, text, selected}) => {
+const ButtonLanguage: FC<ButtonProps> = ({ disabled, text, selected }) => {
   return (
     <button
       disabled={disabled}

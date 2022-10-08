@@ -10,20 +10,20 @@ import Footer from '../components/footer/Footer';
 
 const WeatherPage = () => {
   return (
-    <div className="mx-20 flex flex-col items-center">
+    <div className='mx-20 flex flex-col items-center'>
       <Searchbar />
-      <div className="grid grid-cols-4 w-full gap-x-6 mb-20">
+      <div className='grid grid-cols-4 w-full gap-x-6 mb-20'>
         <WeatherCard />
         <WeatherCard />
         <WeatherCard />
         <WeatherCard />
       </div>
-      <div className="flex justify-center mb-20">
-        <img className="mr-5 cursor-pointer" src={arrowLeft} alt="" />
-        <img className="mx-1" src={dotActive} alt="" />
-        <img className="mx-1" src={dot} alt="" />
-        <img className="mx-1" src={dot} alt="" />
-        <img className="ml-5 cursor-pointer" src={arrowRight} alt="" />
+      <div className='flex justify-center mb-20'>
+        <img className='mr-5 cursor-pointer' src={arrowLeft} alt='' />
+        <img className='mx-1' src={dotActive} alt='' />
+        <img className='mx-1' src={dot} alt='' />
+        <img className='mx-1' src={dot} alt='' />
+        <img className='ml-5 cursor-pointer' src={arrowRight} alt='' />
       </div>
       <Subscription />
       <Footer />

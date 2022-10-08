@@ -18,6 +18,7 @@ module.exports = {
         "secondary-grey": "#9c9c9c",
         "login-blue-1": "#0185ff",
         "login-blue-2": "#076AC6",
+        "widget-sunrise-border":"#D9D9D9",
         "search-shadow": "#4F4E4E7D",
         "gray-blue" : "#627d95",
         "footer-grey": "#3d4e5e",
@@ -31,8 +32,21 @@ module.exports = {
         "128": "32rem",
         "192": "48rem"
       },
+      padding: {
+        "full": "100%"
+      },
       translate: {
         "center": "-50%"
+      },
+      rotate: {
+        "compass-south": "0",
+        "compass-south-west": "45deg",
+        "compass-west": "90deg",
+        "compass-north-west": "135deg",
+        "compass-north": "180deg",
+        "compass-north-east": "225deg",
+        "compass-east": "270deg",
+        "compass-south-east": "315deg"
       },
       maxWidth: {
         "xxs": "12rem",
