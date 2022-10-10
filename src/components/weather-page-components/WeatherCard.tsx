@@ -12,7 +12,7 @@ const someInfo: { text: string; data: string }[] = [
   { text: 'Влажность', data: '20%' },
   { text: 'Осадки', data: '15%' },
 ];
-
+// Add props when have some data?
 const WeatherCard: FC = () => {
   return (
     <div className="relative font-Mulish text-center text-white w-full bg-[url('/src/components/img/cards/bg1.jpg')] bg-center bg-cover rounded-primary shadow-card-shadow px-6">

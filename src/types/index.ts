@@ -22,7 +22,7 @@ export interface WidgetStaticProps {
 }
 
 export interface WidgetCompassProps {
-  angle:
+  rotateAngle:
     | 'rotate-compass-north'
     | 'rotate-compass-north-west'
     | 'rotate-compass-north-east'
@@ -34,16 +34,16 @@ export interface WidgetCompassProps {
 }
 
 export interface WidgetUvProps {
-  move: string;
+  movePosition: string;
 }
 
 export interface WidgetSunriseProps {
   sunriseTime: string;
   sunsetTime: string;
-  move: string;
+  movePosition: string;
 }
 
 export interface WidgetPressureProps {
   amount: string | number;
-  rotate: string;
+  rotateAngle: string;
 }

@@ -1,8 +1,12 @@
 import React, { FC } from 'react';
 import { WidgetWrapperProps } from '../../types';
-import widgetBg from '../img/widget-bg.png';
+// import widgetBg from '../img/widget-bg.png';
 
-const WidgetWrapper: FC<WidgetWrapperProps> = ({ children, title, titleImage }) => {
+const WidgetWrapper: FC<WidgetWrapperProps> = ({
+  children,
+  title,
+  titleImage,
+}) => {
   return (
     <div className='relative pr-full pb-full rounded-primary bg-cover bg-center bg-[url(/src/components/img/widget-bg.png)] font-Mulish'>
       <div className='absolute w-full h-full'>

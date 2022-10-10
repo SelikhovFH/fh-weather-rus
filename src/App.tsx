@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import CityPage from './pages/CityPage';
 import LoginPage from './pages/LoginPage';
 import WeatherPage from './pages/WeatherPage';
 
-const App = () => {
+const App: FC = () => {
   return (
     <>
       {/* <LoginPage /> */}

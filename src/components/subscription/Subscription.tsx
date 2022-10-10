@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import ButtonPrimary from '../buttons/ButtonPrimary';
 
-const Subscription = () => {
+const Subscription: FC = () => {
   return (
     <div className='flex flex-col items-center mb-20'>
       <div className='text-primary-blue font-Mulish text-4.5xl leading-tight mb-14'>

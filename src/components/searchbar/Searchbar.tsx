@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Logo from '../img/searchbar-logo.png';
 import SearchIcon from '../img/service-icons/search.svg';
 import Autocomplete from './Autocomplete';
 import ButtonLanguage from '../buttons/ButtonLanguage';
 
-const Searchbar = () => {
+const Searchbar: FC = () => {
   const [input, setInput] = useState('');
 
   return (

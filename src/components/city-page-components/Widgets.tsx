@@ -20,23 +20,23 @@ const Widgets: FC = () => {
     <div className='mb-20 w-full grid justify-items-center items-center grid-cols-4 grid-rows-2 gap-4'>
       {/* Map this when have some data??? */}
       <WidgetWrapper title='Pressure' titleImage={pressureIcon}>
-        <WidgetInnerPressure amount={1017} rotate='rotate-[32deg]' />
+        <WidgetInnerPressure amount={1017} rotateAngle='rotate-[32deg]' />
       </WidgetWrapper>
       <WidgetWrapper title='Sunrise' titleImage={sunriseIcon}>
         <WidgetInnerSunrise
           sunriseTime='6:05'
           sunsetTime='20:33'
-          move='top-[60%]'
+          movePosition='top-[60%]'
         />
       </WidgetWrapper>
       <WidgetWrapper title='UV Index' titleImage={uvIcon}>
-        <WidgetInnerUv move='left-[50%]' />
+        <WidgetInnerUv movePosition='left-[50%]' />
       </WidgetWrapper>
       <WidgetWrapper title='Feels like' titleImage={tempIcon}>
         <WidgetInnerStatic textMain='29°C' textSecondary='Feels the same' />
       </WidgetWrapper>
       <WidgetWrapper title='Wind' titleImage={windIcon}>
-        <WidgetInnerCompass angle='rotate-compass-north-east' />
+        <WidgetInnerCompass rotateAngle='rotate-compass-north-east' />
       </WidgetWrapper>
     </div>
   );

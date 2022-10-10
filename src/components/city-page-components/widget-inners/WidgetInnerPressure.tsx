@@ -3,7 +3,10 @@ import pressureEllipse from '../../img/dynamic-widgets-icons/pressure/Ellipse 7.
 import pressureArrow from '../../img/dynamic-widgets-icons/pressure/Arrow.svg';
 import { WidgetPressureProps } from '../../../types';
 
-const WidgetInnerPressure: FC<WidgetPressureProps> = ({ amount, rotate }) => {
+const WidgetInnerPressure: FC<WidgetPressureProps> = ({
+  amount,
+  rotateAngle,
+}) => {
   return (
     <div className='mt-10 flex flex-col items-center h-full'>
       <div className='relative w-2/3 h-2/5'>
@@ -13,11 +16,11 @@ const WidgetInnerPressure: FC<WidgetPressureProps> = ({ amount, rotate }) => {
           alt=''
         />
         <div
-          className={`absolute w-1/3 translate-x-center translate-y-center top-2/3 left-1/2 flex justify-center items-center ${rotate}`}>
+          className={`absolute w-1/3 translate-x-center translate-y-center top-2/3 left-1/2 flex justify-center items-center ${rotateAngle}`}>
           <img
             src={pressureArrow}
             alt=''
-            className='-rotate-[40deg] -translate-y-[40%]'
+            className='-rotateAngle-[40deg] -translate-y-[40%]'
           />
         </div>
       </div>

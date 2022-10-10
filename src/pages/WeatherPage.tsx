@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Searchbar from '../components/searchbar/Searchbar';
 import WeatherCard from '../components/weather-page-components/WeatherCard';
 import arrowLeft from '../components/img/pagination/arrow-left.svg';
@@ -8,7 +8,7 @@ import dot from '../components/img/pagination/dot.svg';
 import Subscription from '../components/subscription/Subscription';
 import Footer from '../components/footer/Footer';
 
-const WeatherPage = () => {
+const WeatherPage: FC = () => {
   return (
     <div className='mx-20 flex flex-col items-center'>
       <Searchbar />

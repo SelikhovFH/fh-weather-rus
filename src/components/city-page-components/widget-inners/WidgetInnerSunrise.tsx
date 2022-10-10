@@ -5,7 +5,7 @@ import curvedLine from '../../img/dynamic-widgets-icons/sunrise-time/Vector 11.s
 const WidgetInnerSunrise: FC<WidgetSunriseProps> = ({
   sunriseTime,
   sunsetTime,
-  move,
+  movePosition,
 }) => {
   return (
     <div className='flex flex-col'>
@@ -15,7 +15,7 @@ const WidgetInnerSunrise: FC<WidgetSunriseProps> = ({
       <div className='flex flex-col relative'>
         <img className='sunrise-curved' src={curvedLine} alt='line' />
         <div
-          className={`absolute border-1px border-widget-sunrise-border w-full ${move}`}></div>
+          className={`absolute border-1px border-widget-sunrise-border w-full ${movePosition}`}></div>
       </div>
       <div className='font-light text-2xl text-center font-Open-Sans'>
         Sunset: {sunsetTime}

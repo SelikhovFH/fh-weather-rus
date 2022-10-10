@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import starOutlined from '../components/img/service-icons/star-outlined.svg';
 import cloudy from '../components/img/hours/cloudy.svg';
 import calendar from '../components/img/service-icons/calendar-outlined.svg';
@@ -10,7 +10,7 @@ import GraphSwitcher from '../components/city-page-components/GraphSwitcher';
 import Widgets from '../components/city-page-components/Widgets';
 const someHours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const CityPage = () => {
+const CityPage: FC = () => {
   return (
     <div className='mx-20 flex flex-col items-center text-white'>
       <Searchbar />

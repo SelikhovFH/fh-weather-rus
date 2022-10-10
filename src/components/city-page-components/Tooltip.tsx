@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import rainy from '../img//weather-icons/cards/rainy.svg';
 
-const Tooltip = () => {
+const Tooltip: FC = () => {
   return (
     <div className='max-w-xxs bg-white rounded-primary text-black font-Mulish py-10 px-6'>
       <div className='flex flex-wrap justify-between items-center mb-2.5 font-semibold'>
