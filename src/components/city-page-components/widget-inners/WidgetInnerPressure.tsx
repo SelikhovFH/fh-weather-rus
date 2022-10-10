@@ -20,7 +20,7 @@ const WidgetInnerPressure: FC<WidgetPressureProps> = ({
           <img
             src={pressureArrow}
             alt=''
-            className='-rotateAngle-[40deg] -translate-y-[40%]'
+            className='-rotate-[40deg] -translate-y-[40%]'
           />
         </div>
       </div>

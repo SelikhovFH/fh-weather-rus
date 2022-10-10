@@ -5,8 +5,8 @@ import ellipse from '../../img/dynamic-widgets-icons/compas-big/Ellipse 5.svg';
 import lineBack from '../../img/dynamic-widgets-icons/compas-big/Line-back 34.svg';
 import lineFront from '../../img/dynamic-widgets-icons/compas-big/Line-front 35.svg';
 import compassTop from '../../img/dynamic-widgets-icons/compas-big/Polygon 1.svg';
-import compassBottom from '../../img/dynamic-widgets-icons/compas-big/RectrotateAngle-bottom 35.svg';
-import compassSide from '../../img/dynamic-widgets-icons/compas-big/RectrotateAngle-side 34.svg';
+import compassBottom from '../../img/dynamic-widgets-icons/compas-big/Rectangle-bottom 35.svg';
+import compassSide from '../../img/dynamic-widgets-icons/compas-big/Rectangle-side 34.svg';
 
 const compassIcons = [
   {
