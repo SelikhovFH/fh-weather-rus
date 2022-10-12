@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ButtonProps } from '../../types';
 
-const ButtonLanguage: FC<ButtonProps> = ({ disabled, text, selected }) => {
+const LanguageButton: FC<ButtonProps> = ({ disabled, text, selected }) => {
   return (
     <button
       disabled={disabled}
@@ -16,4 +16,4 @@ const ButtonLanguage: FC<ButtonProps> = ({ disabled, text, selected }) => {
   );
 };
 
-export default ButtonLanguage;
+export default LanguageButton;

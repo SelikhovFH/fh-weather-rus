@@ -1,8 +1,10 @@
 import React, { FC, useState } from 'react';
+import { Link } from 'react-router-dom';
+import LanguageButton from '../buttons/LanguageButton';
 import Logo from '../img/searchbar-logo.png';
 import SearchIcon from '../img/service-icons/search.svg';
+import HomeIcon from '../img/service-icons/Home.svg';
 import Autocomplete from './Autocomplete';
-import ButtonLanguage from '../buttons/ButtonLanguage';
 
 const Searchbar: FC = () => {
   const [input, setInput] = useState('');
@@ -24,10 +26,12 @@ const Searchbar: FC = () => {
         <img className='cursor-pointer px-5 ' src={SearchIcon} alt='' />
         <Autocomplete show={!!input.length} />
       </div>
-
       <div className='flex justify-between items-center'>
-        <ButtonLanguage text='RU' selected />
-        <ButtonLanguage text='UA' />
+        <Link to={'/'}>
+          <img className='mr-4' src={HomeIcon} />
+        </Link>
+        <LanguageButton text='RU' selected />
+        <LanguageButton text='UA' />
       </div>
 
       <div

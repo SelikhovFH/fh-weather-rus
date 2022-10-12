@@ -35,7 +35,7 @@ const compassIcons = [
   },
 ];
 
-const WidgetCompassInner: FC<WidgetCompassProps> = ({ rotateAngle }) => {
+const WidgetInnerCompass: FC<WidgetCompassProps> = ({ rotateAngle }) => {
   return (
     <div className='mt-10 flex justify-center items-center h-1/2'>
       <div className='relative w-1/2 h-full'>
@@ -46,9 +46,8 @@ const WidgetCompassInner: FC<WidgetCompassProps> = ({ rotateAngle }) => {
         />
 
         {compassIcons.map((item, i) => (
-          <>
+          <div key={i}>
             <img
-              key={i}
               src={item.img}
               alt=''
               className={`absolute translate-x-center ${item.stylesImg}`}
@@ -57,7 +56,7 @@ const WidgetCompassInner: FC<WidgetCompassProps> = ({ rotateAngle }) => {
               className={`absolute translate-x-center translate-y-center font-medium text-base leading-none ${item.letterStyles}`}>
               {item.letter}
             </div>
-          </>
+          </div>
         ))}
 
         <div className='absolute translate-x-center translate-y-center top-1/2 left-1/2 text-center font-semibold text-3xl'>
@@ -87,4 +86,4 @@ const WidgetCompassInner: FC<WidgetCompassProps> = ({ rotateAngle }) => {
   );
 };
 
-export default WidgetCompassInner;
+export default WidgetInnerCompass;

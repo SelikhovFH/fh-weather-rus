@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import ButtonPrimary from '../buttons/ButtonPrimary';
+import PrimaryButton from '../buttons/PrimaryButton';
 
 const Subscription: FC = () => {
   return (
@@ -13,7 +13,7 @@ const Subscription: FC = () => {
           placeholder='E-mail'
           type='text'
         />
-        <ButtonPrimary text='Подписаться' />
+        <PrimaryButton text='Подписаться' />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ButtonProps } from '../../types/index';
 
-const ButtonPrimary: FC<ButtonProps> = ({ text, disabled }) => {
+const PrimaryButton: FC<ButtonProps> = ({ text, disabled }) => {
   return (
     <button
       disabled={disabled}
@@ -11,4 +11,4 @@ const ButtonPrimary: FC<ButtonProps> = ({ text, disabled }) => {
   );
 };
 
-export default ButtonPrimary;
+export default PrimaryButton;

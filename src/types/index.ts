@@ -47,3 +47,17 @@ export interface WidgetPressureProps {
   amount: string | number;
   rotateAngle: string;
 }
+
+export interface RequireAuthProps {
+  children: JSX.Element;
+}
+
+export interface SliderProps {
+  pages: JSX.Element[];
+}
+
+export interface PaginationProps {
+  setSelectedPage: (page: number) => void;
+  selectedPage: number;
+  pagesLength: number;
+}

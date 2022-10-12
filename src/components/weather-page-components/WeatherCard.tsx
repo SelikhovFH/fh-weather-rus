@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import cloud from '../img/weather-icons/cards/cloud.svg';
 import cloudy from '../img/weather-icons/cards/cloudy.svg';
 import sun from '../img/weather-icons/cards/sun.svg';
 import rainy from '../img/weather-icons/cards/rainy.svg';
 import star from '../img/service-icons/star-twotone.svg';
-import ButtonPrimary from '../buttons/ButtonPrimary';
+import PrimaryButton from '../buttons/PrimaryButton';
 
 const someHours: any[] = [cloud, cloudy, sun, rainy];
 const someInfo: { text: string; data: string }[] = [
@@ -49,10 +50,11 @@ const WeatherCard: FC = () => {
           </div>
         ))}
       </div>
-
-      <div className='translate-y-1/2'>
-        <ButtonPrimary text='Подробнее' />
-      </div>
+      <Link to='/city-page'>
+        <div className='translate-y-1/2'>
+          <PrimaryButton text='Подробнее' />
+        </div>
+      </Link>
     </div>
   );
 };
