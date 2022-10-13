@@ -6,11 +6,9 @@ const Slider: FC<SliderProps> = ({ pages }) => {
   const [translate, setTranslate] = useState(0);
   const [selectedSlide, setSelectedSlide] = useState(0);
   const width = window.screen.width;
-
   useEffect(() => {
     setTranslate(width * selectedSlide);
   }, [selectedSlide]);
-
   const setSelectedPage = (page: number): void => {
     if (page > pages.length - 1) {
       setSelectedSlide(0);
@@ -22,11 +20,10 @@ const Slider: FC<SliderProps> = ({ pages }) => {
     }
     setSelectedSlide(page);
   };
-
   return (
     <>
       <div className='flex items-center select-none'>
-        <div className={`overflow-hidden`} style={{ maxWidth: `${width}px` }}>
+        <div className='overflow-hidden w-screen'>
           <div
             style={{
               transform: `translateX(-${translate}px)`,

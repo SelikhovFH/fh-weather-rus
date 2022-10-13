@@ -3,7 +3,7 @@ import AddNewCard from './AddNewCard';
 import WeatherCard from './WeatherCard';
 
 export const createPagesWithCards = (): JSX.Element[] => {
-  const someCards: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1]; // Will recieve data in props
+  const someCards: number[] = [0, 1, 2, 3, 4, 5]; // Will recieve data in props
   const pages: JSX.Element[] = [];
 
   let onePage: JSX.Element[] = [];
@@ -12,9 +12,7 @@ export const createPagesWithCards = (): JSX.Element[] => {
     onePage.push(<WeatherCard key={i} />);
     if (((i + 1) % 4 === 0 && i !== 0) || i === someCards.length - 1) {
       pages.push(
-        <div
-          className='grid grid-cols-4 w-full gap-x-6 mb-20 pr-20 first: pl-20'
-          key={i}>
+        <div className='grid grid-cols-4 w-screen px-20 gap-x-6 mb-20' key={i}>
           {onePage.map((item, i) => (
             <WeatherCard key={i} />
           ))}
@@ -25,7 +23,7 @@ export const createPagesWithCards = (): JSX.Element[] => {
       if (onePage.length === 4 && i === someCards.length - 1) {
         pages.push(
           <div
-            className='grid grid-cols-4 w-full gap-x-6 mb-20 pr-20 first: pl-20'
+            className='grid grid-cols-4 w-screen px-20 gap-x-6 mb-20'
             key={'addNewCard'}>
             <AddNewCard />
           </div>,

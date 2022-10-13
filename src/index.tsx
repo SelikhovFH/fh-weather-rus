@@ -6,7 +6,6 @@ import App from './App';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();
-const WeatherContext = React.createContext('');
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -15,9 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <WeatherContext.Provider value={'someValue'}>
-          <App />
-        </WeatherContext.Provider>
+        <App />
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>,

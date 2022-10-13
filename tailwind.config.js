@@ -51,6 +51,7 @@ module.exports = {
       },
       maxWidth: {
         "xxs": "12rem",
+        
       },
       fontSize: {
         "tiny": "12px",

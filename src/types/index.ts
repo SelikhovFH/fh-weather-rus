@@ -61,3 +61,13 @@ export interface PaginationProps {
   selectedPage: number;
   pagesLength: number;
 }
+
+export interface WeatherCardProps {
+  cityName: string;
+  mainTemp: number;
+  descr: string;
+  wind: number;
+  humidity: number;
+  precipitation: number;
+  hourTemp: number[];
+}
