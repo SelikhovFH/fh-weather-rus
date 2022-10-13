@@ -71,3 +71,4 @@ export interface WeatherCardProps {
   precipitation: number;
   hourTemp: number[];
 }
+

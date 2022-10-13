@@ -8,7 +8,6 @@ import Autocomplete from './Autocomplete';
 
 const Searchbar: FC = () => {
   const [input, setInput] = useState('');
-
   return (
     <div className='pt-8 pb-20 w-full flex justify-between'>
       <div className='flex items-center'>
