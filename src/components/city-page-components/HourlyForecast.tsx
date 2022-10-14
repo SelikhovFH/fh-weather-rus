@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import cloudy from '../img/hours/cloudy.svg';
-import calendar from '../img/service-icons/calendar-outlined.svg';
+import { serviceIcons } from '../../assets/Icons';
 
 const someHours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -8,7 +8,11 @@ const HourlyForecast: FC = () => {
   return (
     <div className='w-full rounded-primary bg-gray-blue py-10 px-18 mb-20'>
       <div className='flex justify-center items-center mb-16 text-4xl'>
-        <img className='mr-2.5' src={calendar} alt='img' />
+        <img
+          className='mr-2.5'
+          src={serviceIcons['calendar-outlined']}
+          alt='img'
+        />
         <div className='font-Mulish'>Почасовой прогноз</div>
       </div>
 

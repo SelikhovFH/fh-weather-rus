@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import starOutlined from '../img/service-icons/star-outlined.svg';
+import { serviceIcons } from '../../assets/Icons';
 
 const CityTitle: FC = () => {
   return (
@@ -14,7 +14,11 @@ const CityTitle: FC = () => {
       <div className='bg-blured-grey backdrop-blur-sm py-6 px-14 font-light text-5xl rounded-primary'>
         12:00, Пятница
       </div>
-      <img className='absolute right-8 top-5' src={starOutlined} alt='star' />
+      <img
+        className='absolute right-8 top-5'
+        src={serviceIcons['star-outlined']}
+        alt='star'
+      />
     </div>
   );
 };

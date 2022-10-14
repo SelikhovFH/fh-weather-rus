@@ -5,7 +5,6 @@ import Footer from '../components/footer/Footer';
 import Slider from '../components/weather-page-components/Slider';
 import { createPagesWithCards } from '../components/weather-page-components/createPagesWithCards';
 
-
 const WeatherPage: FC = () => {
   return (
     <div className='mx-20 flex flex-col items-center'>

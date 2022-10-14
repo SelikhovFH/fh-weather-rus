@@ -1,5 +1,3 @@
-// import {JsxElement} from 'typescript';
-
 export interface ButtonProps {
   text: string;
   selected?: boolean;

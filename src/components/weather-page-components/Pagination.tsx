@@ -1,9 +1,6 @@
 import React, { FC } from 'react';
-import arrowRight from '../img/pagination/arrow-right.svg';
-import dotActive from '../img/pagination/dot-active.svg';
-import dot from '../img/pagination/dot.svg';
-import arrowLeft from '../img/pagination/arrow-left.svg';
 import { PaginationProps } from '../../types';
+import { paginationIcons } from '../../assets/Icons';
 
 const Pagination: FC<PaginationProps> = ({
   setSelectedPage,
@@ -17,21 +14,25 @@ const Pagination: FC<PaginationProps> = ({
       <img
         onClick={() => setSelectedPage(selectedPage - 1)}
         className='mr-5 cursor-pointer'
-        src={arrowLeft}
+        src={paginationIcons['pagination-left']}
         alt=''
       />
       {dots.map((_, i) => (
         <img
           key={i}
           className='mx-1'
-          src={i === selectedPage ? dotActive : dot}
+          src={
+            i === selectedPage
+              ? paginationIcons['pagination-dot-active']
+              : paginationIcons['pagination-dot-inactive']
+          }
           alt=''
         />
       ))}
       <img
         onClick={() => setSelectedPage(selectedPage + 1)}
         className='ml-5 cursor-pointer'
-        src={arrowRight}
+        src={paginationIcons['pagination-right']}
         alt=''
       />
     </div>

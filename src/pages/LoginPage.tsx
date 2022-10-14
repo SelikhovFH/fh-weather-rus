@@ -41,6 +41,14 @@ const LoginPage: FC = () => {
             className='bg-transparent w-128 border-login-blue-1 border-2 rounded-primary font-Open-Sans text-tiny font-normal py-6 px-8 outline-none text-white mb-8'
             id='password'
           />
+          {isRegister && (
+            <input
+              type='email'
+              placeholder='Email'
+              className='bg-transparent w-128 border-login-blue-1 border-2 rounded-primary font-Open-Sans text-tiny font-normal py-6 px-8 outline-none text-white mb-8'
+              id='email'
+            />
+          )}
           <input
             // value={password}
             // onChange={(e) => {
@@ -51,14 +59,6 @@ const LoginPage: FC = () => {
             className='bg-transparent w-128 border-login-blue-1 border-2 rounded-primary font-Open-Sans text-tiny font-normal py-6 px-8 outline-none text-white mb-8'
             id='username'
           />
-          {/* {isRegister && (
-            <input
-              type='password'
-              placeholder='Повторите пароль'
-              className='bg-transparent w-128 border-login-blue-1 border-2 rounded-primary font-Open-Sans text-tiny font-normal py-6 px-8 outline-none text-white mb-8'
-              id='username'
-            />
-          )} */}
         </div>
         <button className='py-4 px-28 -mb-8 cursor-pointer text-white bg-gradient-to-r from-login-blue-1 to-login-blue-2 rounded-primary font-Mulish font-semibold text-2xl'>
           Вход
