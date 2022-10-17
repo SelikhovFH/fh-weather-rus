@@ -1,11 +1,9 @@
+import { Suggestion } from 'react-places-autocomplete';
+
 export interface ButtonProps {
   text: string;
   selected?: boolean;
   disabled?: boolean;
-}
-
-export interface AutocompleteProps {
-  show: boolean;
 }
 
 export interface WidgetWrapperProps {
