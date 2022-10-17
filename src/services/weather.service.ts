@@ -3,7 +3,7 @@ import axios from 'axios';
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 export const WeatherService = {
-  async getAllData({ lat, lon }: { lat: string; lon: string }) {
+  async getAllData({ lat, lon }: { lat: number; lon: number }) {
     return axios.get('/data/2.5/forecast', {
       params: {
         lat,
@@ -14,15 +14,15 @@ export const WeatherService = {
       },
     });
   },
-  async getCoords({ q }: { q: string }) {
-    return axios.get('/geo/1.0/direct', {
-      params: {
-        q,
-        appid: process.env.REACT_APP_API_KEY,
-        limit: 5,
-      },
-    });
-  },
+  // async getCoords({ q }: { q: string }) {
+  //   return axios.get('/geo/1.0/direct', {
+  //     params: {
+  //       q,
+  //       appid: process.env.REACT_APP_API_KEY,
+  //       limit: 5,
+  //     },
+  //   });
+  // },
 };
 
 // EXAMPLE RESPONSE
