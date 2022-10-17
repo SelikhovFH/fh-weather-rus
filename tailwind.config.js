@@ -40,14 +40,14 @@ module.exports = {
         "center": "-50%"
       },
       rotate: {
-        "compass-south": "0",
-        "compass-south-west": "45deg",
-        "compass-west": "90deg",
-        "compass-north-west": "135deg",
-        "compass-north": "180deg",
-        "compass-north-east": "225deg",
-        "compass-east": "270deg",
-        "compass-south-east": "315deg"
+        // "compass-south": "0",
+        // "compass-south-west": "45deg",
+        // "compass-west": "90deg",
+        // "compass-north-west": "135deg",
+        // "compass-north": "180deg",
+        // "compass-north-east": "225deg",
+        // "compass-east": "270deg",
+        // "compass-south-east": "315deg"
       },
       maxWidth: {
         "xxs": "12rem",

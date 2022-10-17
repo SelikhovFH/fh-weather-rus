@@ -20,15 +20,15 @@ export interface WidgetStaticProps {
 }
 
 export interface WidgetCompassProps {
-  rotateAngle:
-    | 'rotate-compass-north'
-    | 'rotate-compass-north-west'
-    | 'rotate-compass-north-east'
-    | 'rotate-compass-south'
-    | 'rotate-compass-south-west'
-    | 'rotate-compass-south-east'
-    | 'rotate-compass-west'
-    | 'rotate-compass-east';
+  rotateAngle: number;
+  // | 'rotate-compass-north'
+  // | 'rotate-compass-north-west'
+  // | 'rotate-compass-north-east'
+  // | 'rotate-compass-south'
+  // | 'rotate-compass-south-west'
+  // | 'rotate-compass-south-east'
+  // | 'rotate-compass-west'
+  // | 'rotate-compass-east';
 }
 
 export interface WidgetUvProps {
@@ -42,8 +42,7 @@ export interface WidgetSunriseProps {
 }
 
 export interface WidgetPressureProps {
-  amount: string | number;
-  rotateAngle: string;
+  pressureData: number;
 }
 
 export interface RequireAuthProps {
@@ -69,4 +68,3 @@ export interface WeatherCardProps {
   precipitation: number;
   hourTemp: number[];
 }
-

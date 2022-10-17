@@ -20,7 +20,7 @@ const Widgets: FC = () => {
     <div className='mb-20 w-full grid justify-items-center items-center grid-cols-4 grid-rows-2 gap-4'>
       {/* Map this when have some data??? */}
       <WidgetWrapper title='Pressure' titleImage={pressureIcon}>
-        <WidgetInnerPressure amount={1017} rotateAngle='rotate-[32deg]' />
+        <WidgetInnerPressure pressureData={1017} />
       </WidgetWrapper>
       <WidgetWrapper title='Sunrise' titleImage={sunriseIcon}>
         <WidgetInnerSunrise
@@ -30,13 +30,13 @@ const Widgets: FC = () => {
         />
       </WidgetWrapper>
       <WidgetWrapper title='UV Index' titleImage={uvIcon}>
-        <WidgetInnerUv movePosition='left-[50%]' />
+        <WidgetInnerUv movePosition='left-[8%]' />
       </WidgetWrapper>
       <WidgetWrapper title='Feels like' titleImage={tempIcon}>
         <WidgetInnerStatic textMain='29°C' textSecondary='Feels the same' />
       </WidgetWrapper>
       <WidgetWrapper title='Wind' titleImage={windIcon}>
-        <WidgetInnerCompass rotateAngle='rotate-compass-north-east' />
+        <WidgetInnerCompass rotateAngle={65} />
       </WidgetWrapper>
     </div>
   );

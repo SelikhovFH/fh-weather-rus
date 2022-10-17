@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { WidgetCompassProps } from '../../../types';
+import { widgetCompassIcons } from '../../../assets/Icons';
 
 import ellipse from '../../img/dynamic-widgets-icons/compas-big/Ellipse 5.svg';
 import lineBack from '../../img/dynamic-widgets-icons/compas-big/Line-back 34.svg';
@@ -10,26 +11,26 @@ import compassSide from '../../img/dynamic-widgets-icons/compas-big/Rectangle-si
 
 const compassIcons = [
   {
-    img: compassTop,
+    img: widgetCompassIcons['Polygon 1'],
     stylesImg: 'top-0 left-1/2 translate-y-[-40%]',
     letter: 'С',
     letterStyles: 'top-[10%] left-1/2 ',
   },
   {
-    img: compassBottom,
+    img: widgetCompassIcons['Rectangle-bottom 35'],
     stylesImg: 'bottom-0 left-1/2',
     letter: 'Ю',
     letterStyles: 'bottom-0 left-1/2',
   },
   {
-    img: compassSide,
-    stylesImg: 'top-1/2 left-0 translate-x-[15%] translate-y-center',
+    img: widgetCompassIcons['Rectangle-side 34'],
+    stylesImg: 'top-1/2 left-0 translate-x-[10%] translate-y-center',
     letter: 'З',
     letterStyles: 'top-1/2 left-[10%]',
   },
   {
-    img: compassSide,
-    stylesImg: 'top-1/2 right-0 translate-x-1/4 translate-y-center',
+    img: widgetCompassIcons['Rectangle-side 34'],
+    stylesImg: 'top-1/2 right-0 translate-x-[10%] translate-y-center',
     letter: 'В',
     letterStyles: 'top-1/2 right-[3%]',
   },
@@ -37,7 +38,7 @@ const compassIcons = [
 
 const WidgetInnerCompass: FC<WidgetCompassProps> = ({ rotateAngle }) => {
   return (
-    <div className='mt-10 flex justify-center items-center h-1/2'>
+    <div className='mt-10 flex justify-center items-center h-1/2 '>
       <div className='relative w-1/2 h-full'>
         <img
           className='h-full absolute top-1/2 left-1/2 translate-x-center translate-y-center'
@@ -65,7 +66,8 @@ const WidgetInnerCompass: FC<WidgetCompassProps> = ({ rotateAngle }) => {
         </div>
 
         <div
-          className={`absolute left-1/2 top-1/2 w-1/5 h-1/5 translate-x-center translate-y-center ${rotateAngle}`}
+          className='absolute left-1/2 top-1/2 w-1/5 h-1/5 translate-x-center translate-y-center'
+          style={{transform: `translate(-50%, -50%) rotate(${rotateAngle}deg)`}}
           // rotateAngle prop to Compass Rotate
         >
           <div className='flex flex-col items-center justify-center '>
