@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Searchbar from '../components/searchbar/Searchbar';
+import Header from '../components/searchbar/Header';
 import Subscription from '../components/subscription/Subscription';
 import Footer from '../components/footer/Footer';
 import Tooltip from '../components/city-page-components/Tooltip';
@@ -11,7 +11,7 @@ import HourlyForecast from '../components/city-page-components/HourlyForecast';
 const CityPage: FC = () => {
   return (
     <div className='mx-20 flex flex-col items-center text-white'>
-      <Searchbar />
+      <Header />
       <CityTitle />
       <HourlyForecast />
       <Widgets />

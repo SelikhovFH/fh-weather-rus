@@ -15,9 +15,6 @@ const App: FC = () => {
   // const { data, isLoading, error } = useQuery('weatherData', () =>
   //   WeatherService.getAllData({ lat: '44.34', lon: '10.99' }),
   // );
-  // const { data, isLoading, error } = useQuery('weatherData', () =>
-  //   WeatherService.getCoords({ q: 'Was' }),
-  // );
   // console.log(data);
 
   return (
@@ -34,7 +31,7 @@ const App: FC = () => {
           }
         />
         <Route
-          path='city-page'
+          path='/:lat/:lng'
           element={
             <RequireAuth>
               <CityPage />

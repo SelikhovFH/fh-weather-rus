@@ -14,7 +14,7 @@ const Pagination: FC<PaginationProps> = ({
       <img
         onClick={() => setSelectedPage(selectedPage - 1)}
         className='mr-5 cursor-pointer'
-        src={paginationIcons['pagination-left']}
+        src={paginationIcons['arrow-left']}
         alt=''
       />
       {dots.map((_, i) => (
@@ -23,8 +23,8 @@ const Pagination: FC<PaginationProps> = ({
           className='mx-1'
           src={
             i === selectedPage
-              ? paginationIcons['pagination-dot-active']
-              : paginationIcons['pagination-dot-inactive']
+              ? paginationIcons['dot-active']
+              : paginationIcons['dot']
           }
           alt=''
         />
@@ -32,7 +32,7 @@ const Pagination: FC<PaginationProps> = ({
       <img
         onClick={() => setSelectedPage(selectedPage + 1)}
         className='ml-5 cursor-pointer'
-        src={paginationIcons['pagination-right']}
+        src={paginationIcons['arrow-right']}
         alt=''
       />
     </div>

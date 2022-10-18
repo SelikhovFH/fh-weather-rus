@@ -1,5 +1,3 @@
-import { Suggestion } from 'react-places-autocomplete';
-
 export interface ButtonProps {
   text: string;
   selected?: boolean;
@@ -65,4 +63,8 @@ export interface WeatherCardProps {
   humidity: number;
   precipitation: number;
   hourTemp: number[];
+}
+
+export interface BackdropShadowProps {
+  hidden: boolean;
 }
