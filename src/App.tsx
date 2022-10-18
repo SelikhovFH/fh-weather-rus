@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import {
-  weatherExampleSmall,
-  WeatherService,
-} from './services/weather.service';
+import { weatherExampleSmall, WeatherService } from './services/weather.service';
 import RequireAuth from './hoc/RequireAuth';
 import CityPage from './pages/CityPage';
 import LoginPage from './pages/LoginPage';
