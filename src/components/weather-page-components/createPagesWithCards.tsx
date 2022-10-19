@@ -1,6 +1,6 @@
 import React from 'react';
-import AddNewCard from './AddNewCard';
-import WeatherCard from './WeatherCard';
+import AddNewCard from 'components/weather-page-components/AddNewCard';
+import WeatherCard from 'components/weather-page-components/WeatherCard';
 
 export const createPagesWithCards = (): JSX.Element[] => {
   const someCards: number[] = [0, 1, 2, 3, 4, 5]; // Will recieve data in props

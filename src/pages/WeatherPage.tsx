@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import Header from '../components/searchbar/Header';
-import Subscription from '../components/subscription/Subscription';
-import Footer from '../components/footer/Footer';
-import Slider from '../components/weather-page-components/Slider';
-import { createPagesWithCards } from '../components/weather-page-components/createPagesWithCards';
+import Header from 'components/Header';
+import Subscription from 'components/Subscription';
+import Footer from 'components/Footer';
+import Slider from 'components/weather-page-components/Slider';
+import { createPagesWithCards } from 'components/weather-page-components/createPagesWithCards';
 
 const WeatherPage: FC = () => {
   return (

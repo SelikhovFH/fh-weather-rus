@@ -14,15 +14,6 @@ export const WeatherService = {
       },
     });
   },
-  // async getCoords({ q }: { q: string }) {
-  //   return axios.get('/geo/1.0/direct', {
-  //     params: {
-  //       q,
-  //       appid: process.env.REACT_APP_API_KEY,
-  //       limit: 5,
-  //     },
-  //   });
-  // },
 };
 
 // EXAMPLE RESPONSE

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import FhLogo from '../components/img/login-fh-logo.svg';
+import FhLogo from 'components/img/login-fh-logo.svg';
 
 const LoginPage: FC = () => {
   const [isRegister, setIsRegister] = useState(true);

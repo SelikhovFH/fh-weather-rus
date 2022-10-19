@@ -5,10 +5,10 @@ import {
   weatherExampleSmall,
   WeatherService,
 } from './services/weather.service';
-import RequireAuth from './hoc/RequireAuth';
-import CityPage from './pages/CityPage';
-import LoginPage from './pages/LoginPage';
-import WeatherPage from './pages/WeatherPage';
+import RequireAuth from 'hoc/RequireAuth';
+import CityPage from 'pages/CityPage';
+import LoginPage from 'pages/LoginPage';
+import WeatherPage from 'pages/WeatherPage';
 import { WeatherContext } from './Context';
 
 const App: FC = () => {
