@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import PlacesAutocomplete, {
   geocodeByPlaceId,
 } from 'react-places-autocomplete';
@@ -22,13 +22,13 @@ const Search: FC = () => {
   //   };
   // };
 
-  const navigateToCityPage = async (placeId: string): Promise<void> => {
-    setIsHidden(true);
-    const res: google.maps.GeocoderResult[] = await geocodeByPlaceId(placeId);
-    naviate(
-      `/${res[0].geometry.location.lat()}/${res[0].geometry.location.lng()}`,
-    );
-  };
+  // const navigateToCityPage = async (placeId: string): Promise<void> => {
+  //   setIsHidden(true);
+  //   const res: google.maps.GeocoderResult[] = await geocodeByPlaceId(placeId);
+  //   naviate(
+  //     `/${res[0].geometry.location.lat()}/${res[0].geometry.location.lng()}`,
+  //   );
+  // };
 
   return (
     <>
@@ -60,15 +60,18 @@ const Search: FC = () => {
               {suggestions.map(item => (
                 <li
                   {...getSuggestionItemProps(item, {
-                    onClick: () => navigateToCityPage(item.placeId),
                     className:
                       'font-Mulish font-normal text-2xl py-2.5 px-8 hover:bg-light-blue hover:text-white cursor-pointer z-30',
                   })}
                   key={item.placeId}>
-                  <span className='font-bold'>
-                    {item.formattedSuggestion.mainText},{' '}
-                  </span>
-                  {item.formattedSuggestion.secondaryText}
+                  <Link to={`/${item.placeId}`}>
+                    <div>
+                      <span className='font-bold'>
+                        {item.formattedSuggestion.mainText},{' '}
+                      </span>
+                      {item.formattedSuggestion.secondaryText}
+                    </div>
+                  </Link>
                 </li>
               ))}
               {loading && (

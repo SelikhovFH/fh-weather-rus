@@ -31,7 +31,7 @@ const App: FC = () => {
           }
         />
         <Route
-          path='/:lat/:lng'
+          path='/:placeId'
           element={
             <RequireAuth>
               <CityPage />
