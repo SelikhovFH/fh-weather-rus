@@ -68,3 +68,13 @@ export interface WeatherCardProps {
 export interface BackdropShadowProps {
   hidden: boolean;
 }
+
+export interface CityTitleProps {
+  image: string;
+}
+
+export interface GooglePlaceInfo {
+  lat: number;
+  lng: number;
+  photoUrl: string;
+}

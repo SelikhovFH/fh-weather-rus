@@ -64,7 +64,9 @@ const Search: FC = () => {
                       'font-Mulish font-normal text-2xl py-2.5 px-8 hover:bg-light-blue hover:text-white cursor-pointer z-30',
                   })}
                   key={item.placeId}>
-                  <Link to={`/${item.placeId}`}>
+                  <Link
+                    onClick={() => setIsHidden(true)}
+                    to={`/${item.placeId}`}>
                     <div>
                       <span className='font-bold'>
                         {item.formattedSuggestion.mainText},{' '}

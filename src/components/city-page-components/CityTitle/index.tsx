@@ -1,9 +1,12 @@
 import React, { FC } from 'react';
 import { serviceIcons } from 'assets/Icons';
+import { CityTitleProps } from 'types';
 
-const CityTitle: FC = () => {
+const CityTitle: FC<CityTitleProps> = ({ image }) => {
   return (
-    <div className="w-full flex justify-between items-end py-24 px-24 rounded-primary font-Mulish relative bg-[url('/src/components/img/location-bg.png')] bg-center bg-cover mb-20">
+    <div
+      style={{ backgroundImage: `url('${image})'` }}
+      className="w-full flex justify-between items-end py-24 px-24 rounded-primary font-Mulish relative bg-[url('/src/components/img/location-bg.png')] bg-center bg-cover mb-20">
       <div className='bg-blured-grey backdrop-blur-sm rounded-primary py-8 px-14 font-light text-8xl leading-tight'>
         <div className='mb-4'>Варшава</div>
         <div className='mb-4'>29°C</div>
