@@ -4,10 +4,6 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-export interface AutocompleteProps {
-  show: boolean;
-}
-
 export interface WidgetWrapperProps {
   children: JSX.Element;
   titleImage: any;
@@ -67,4 +63,18 @@ export interface WeatherCardProps {
   humidity: number;
   precipitation: number;
   hourTemp: number[];
+}
+
+export interface BackdropShadowProps {
+  hidden: boolean;
+}
+
+export interface CityTitleProps {
+  image: string;
+}
+
+export interface GooglePlaceInfo {
+  lat: number;
+  lng: number;
+  photoUrl: string;
 }
