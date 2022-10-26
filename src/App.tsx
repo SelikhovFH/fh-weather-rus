@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import {
-  weatherExampleSmall,
-  WeatherService,
-} from './services/weather.service';
+import { WeatherService, weatherExample } from './services/weather.service';
 import RequireAuth from 'hoc/RequireAuth';
 import CityPage from 'pages/CityPage';
 import LoginPage from 'pages/LoginPage';
@@ -18,7 +15,7 @@ const App: FC = () => {
   // console.log(data);
 
   return (
-    <WeatherContext.Provider value={[weatherExampleSmall]}>
+    <WeatherContext.Provider value={[weatherExample]}>
       <Routes>
         <Route path='/login' element={<LoginPage />} />
         <Route

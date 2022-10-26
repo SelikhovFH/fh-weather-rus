@@ -70,10 +70,15 @@ export interface BackdropShadowProps {
 }
 
 export interface CityTitleProps {
+  temp: number;
   image: string;
+  placeName: string;
+  date: number;
+  weatherDescription: string;
 }
 
 export interface GooglePlaceInfo {
+  name: string;
   lat: number;
   lng: number;
   photoUrl: string;
