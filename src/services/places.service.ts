@@ -18,6 +18,7 @@ export const PlacesService = {
           status === google.maps.places.PlacesServiceStatus.OK
         ) {
           const placeInfo: GooglePlaceInfo = {
+            name: place.name as string,
             lat: place.geometry?.location?.lat() as number,
             lng: place.geometry?.location?.lng() as number,
             photoUrl: place.photos[0].getUrl({
@@ -26,7 +27,7 @@ export const PlacesService = {
           };
           resolve(placeInfo);
         } else {
-          reject(status);
+          reject('Error: Place is not found');
         }
       });
     });

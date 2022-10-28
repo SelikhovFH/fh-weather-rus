@@ -12,9 +12,15 @@ import { useQuery } from 'react-query';
 import { PlacesService } from 'services/places.service';
 import { GooglePlaceInfo } from 'types';
 
+import { weatherExample } from 'services/weather.service';
+
 const CityPage: FC = () => {
   const { placeId } = useParams<{ placeId: string }>();
-  const { data, isLoading, error } = useQuery(['placeInfo', placeId], () =>
+  const {
+    data: placeInfo,
+    isLoading: isLoadingPlaceInfo,
+    error: errorPlaceInfo,
+  } = useQuery(['placeInfo', placeId], () =>
     PlacesService.getPlaceInfo({
       placeId: placeId as string,
       width: window.screen.width,
@@ -24,7 +30,16 @@ const CityPage: FC = () => {
   return (
     <div className='mx-20 flex flex-col items-center text-white'>
       <Header />
-      <CityTitle image={(data as GooglePlaceInfo)?.photoUrl} />
+      {/* <div className='text-black'>
+        {errorPlaceInfo ? (errorPlaceInfo as string) : ''}
+      </div> */}
+      <CityTitle
+        placeName={(placeInfo as GooglePlaceInfo)?.name}
+        date={weatherExample?.current?.dt}
+        temp={weatherExample?.current?.temp}
+        weatherDescription={weatherExample?.current?.weather[0].description}
+        image={(placeInfo as GooglePlaceInfo)?.photoUrl}
+      />
       <HourlyForecast />
       <Widgets />
       {/* <Tooltip /> */}
