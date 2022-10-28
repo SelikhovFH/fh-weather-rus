@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { serviceIcons } from 'assets/Icons';
 import { CityTitleProps } from 'types';
+import { getStringDate, uppercaseFirstLetter } from 'helpers';
 
 const CityTitle: FC<CityTitleProps> = ({
   image,
@@ -9,19 +10,6 @@ const CityTitle: FC<CityTitleProps> = ({
   weatherDescription,
   temp,
 }) => {
-  const getStringDate = (date: number): string => {
-    return `${new Date(date).toLocaleString('en-GB', {
-      weekday: 'long',
-    })}, ${new Date(date).toLocaleTimeString('en-GB', {
-      hour: '2-digit',
-      minute: '2-digit',
-    })}`;
-  };
-
-  const uppercaseFirstLetter = (str: string): string => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
-
   return (
     <div
       style={{ backgroundImage: `url('${image})'` }}
