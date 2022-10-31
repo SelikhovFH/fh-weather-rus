@@ -14,13 +14,14 @@ export const mapHoursWithSunriseAndSunset = ({
   hourForecast: HourForecast[];
 }): JSX.Element[] => {
   const renderedHours: JSX.Element[] = [];
+  const oneHour = 3600000;
   const isRenderSunriseOrSunset = (
     sunriseOrSunset: number,
     itemTime: number,
     text: string,
   ): void => {
     if (
-      itemTime - sunriseOrSunset < 3600000 &&
+      itemTime - sunriseOrSunset < oneHour &&
       itemTime - sunriseOrSunset > 0
     ) {
       renderedHours.push(
