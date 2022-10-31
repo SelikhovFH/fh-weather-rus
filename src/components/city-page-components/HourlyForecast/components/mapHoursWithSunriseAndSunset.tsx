@@ -1,6 +1,6 @@
+import React from 'react';
 import { weatherIcons } from 'assets/Icons';
 import { getStringTime } from 'helpers';
-import React from 'react';
 import { HourForecast } from 'types';
 import HourCard from 'components/city-page-components/HourlyForecast/components/HourCard';
 
@@ -34,8 +34,10 @@ export const mapHoursWithSunriseAndSunset = ({
     }
   };
   for (let i = 0; i < hourForecast.length; i++) {
+    if (renderedHours.length >= 11) break;
     isRenderSunriseOrSunset(sunrise, hourForecast[i].dt, 'Sunrise');
     isRenderSunriseOrSunset(sunset, hourForecast[i].dt, 'Sunset');
+    if (renderedHours.length >= 11) break;
     renderedHours.push(
       <HourCard
         icon={weatherIcons[hourForecast[i].weather[0].id]}
@@ -45,5 +47,5 @@ export const mapHoursWithSunriseAndSunset = ({
       />,
     );
   }
-  return renderedHours.slice(0, 11);
+  return renderedHours;
 };
