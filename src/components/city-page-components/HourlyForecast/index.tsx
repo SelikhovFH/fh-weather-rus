@@ -32,7 +32,7 @@ const HourlyForecast: FC<HourlyForecastProps> = ({
         />
         <div className='font-Mulish'>Почасовой прогноз</div>
       </div>
-      <div className='h-72 overflow-x-scroll'>
+      <div className='overflow-x-scroll'>
         <div className='flex'>
           {hourForecast.map((item, i) => (
             <React.Fragment key={item.dt}>
