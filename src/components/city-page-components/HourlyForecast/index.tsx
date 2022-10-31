@@ -1,13 +1,27 @@
 import React, { FC } from 'react';
 import { serviceIcons } from 'assets/Icons';
 import { HourlyForecastProps } from 'types';
-import { mapHoursWithSunriseAndSunset } from 'components/city-page-components/HourlyForecast/components/mapHoursWithSunriseAndSunset';
+import { weatherIcons } from 'assets/Icons';
+import { getStringTime } from 'helpers';
+import HourCard from 'components/city-page-components/HourlyForecast/components/HourCard';
 
 const HourlyForecast: FC<HourlyForecastProps> = ({
   hourForecast,
   sunrise,
   sunset,
 }) => {
+  const returnSunriseOrSunset = (
+    sunriseOrSunset: number,
+    text: string,
+  ): JSX.Element => {
+    return (
+      <HourCard
+        icon={weatherIcons['sunrise']}
+        text={text}
+        time={getStringTime(sunriseOrSunset)}
+      />
+    );
+  };
   return (
     <div className='w-full rounded-primary bg-gray-blue py-10 px-18 mb-20'>
       <div className='flex justify-center items-center mb-16 text-4xl'>
@@ -18,8 +32,24 @@ const HourlyForecast: FC<HourlyForecastProps> = ({
         />
         <div className='font-Mulish'>Почасовой прогноз</div>
       </div>
-      <div className='grid grid-cols-11 grid-rows-1 gap-4'>
-        {mapHoursWithSunriseAndSunset({ sunrise, sunset, hourForecast })}
+      <div className='h-72 overflow-x-scroll'>
+        <div className='flex'>
+          {hourForecast.map((item, i) => (
+            <React.Fragment key={item.dt}>
+              <HourCard
+                icon={weatherIcons[item.weather[0].id]}
+                text={`${item.temp}°C`}
+                time={i === 0 ? 'Now' : getStringTime(item.dt)}
+              />
+              {sunrise > item.dt && sunrise < hourForecast[i + 1].dt
+                ? returnSunriseOrSunset(sunrise, 'Sunrise')
+                : null}
+              {sunset > item.dt && sunset < hourForecast[i + 1].dt
+                ? returnSunriseOrSunset(sunset, 'Sunset')
+                : null}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );
