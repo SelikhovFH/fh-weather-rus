@@ -4,24 +4,13 @@ import { HourlyForecastProps } from 'types';
 import { weatherIcons } from 'assets/Icons';
 import { getStringTime } from 'helpers';
 import HourCard from 'components/city-page-components/HourlyForecast/components/HourCard';
+import { returnSunriseOrSunset } from 'components/city-page-components/HourlyForecast/components/returnSunriseOrSunset';
 
 const HourlyForecast: FC<HourlyForecastProps> = ({
   hourForecast,
   sunrise,
   sunset,
 }) => {
-  const returnSunriseOrSunset = (
-    sunriseOrSunset: number,
-    text: string,
-  ): JSX.Element => {
-    return (
-      <HourCard
-        icon={weatherIcons['sunrise']}
-        text={text}
-        time={getStringTime(sunriseOrSunset)}
-      />
-    );
-  };
   return (
     <div className='w-full rounded-primary bg-gray-blue py-10 px-18 mb-20'>
       <div className='flex justify-center items-center mb-16 text-4xl'>
@@ -34,7 +23,7 @@ const HourlyForecast: FC<HourlyForecastProps> = ({
       </div>
       <div className='overflow-x-scroll'>
         <div className='flex'>
-          {hourForecast.map((item, i) => (
+          {hourForecast.slice(0, 24).map((item, i) => (
             <React.Fragment key={item.dt}>
               <HourCard
                 icon={weatherIcons[item.weather[0].id]}
