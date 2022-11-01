@@ -1,3 +1,4 @@
+import { WeatherResponse } from 'types';
 import axios from 'axios';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
@@ -18,7 +19,7 @@ export const WeatherService = {
 
 // MOCKED RESPONSE
 
-export const weatherExample = {
+export const weatherExample: WeatherResponse = {
   lat: 39.31,
   lon: -74.5,
   timezone: 'America/New_York',
@@ -26,12 +27,12 @@ export const weatherExample = {
   current: {
     dt: 1646318698,
     sunrise: 1646306882,
-    sunset: 1646347929,
-    temp: 282.21,
-    feels_like: 278.41,
+    sunset: 1706347929,
+    temp: 15,
+    feels_like: 10,
     pressure: 1014,
     humidity: 65,
-    dew_point: 275.99,
+    dew_point: 15.9,
     uvi: 2.55,
     clouds: 40,
     visibility: 10000,

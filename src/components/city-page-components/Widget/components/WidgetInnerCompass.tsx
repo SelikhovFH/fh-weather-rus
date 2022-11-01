@@ -36,7 +36,10 @@ const compassIcons = [
   },
 ];
 
-const WidgetInnerCompass: FC<WidgetCompassProps> = ({ rotateAngle }) => {
+const WidgetInnerCompass: FC<WidgetCompassProps> = ({
+  rotateAngle,
+  windSpeed,
+}) => {
   return (
     <div className='mt-10 flex justify-center items-center h-1/2 '>
       <div className='relative w-1/2 h-full'>
@@ -61,13 +64,16 @@ const WidgetInnerCompass: FC<WidgetCompassProps> = ({ rotateAngle }) => {
         ))}
 
         <div className='absolute translate-x-center translate-y-center top-1/2 left-1/2 text-center font-semibold text-3xl'>
-          2<br />
-          км/ч
+          {windSpeed}
+          <br />
+          m/s
         </div>
 
         <div
           className='absolute left-1/2 top-1/2 w-1/5 h-1/5 translate-x-center translate-y-center'
-          style={{transform: `translate(-50%, -50%) rotate(${rotateAngle}deg)`}}
+          style={{
+            transform: `translate(-50%, -50%) rotate(${rotateAngle}deg)`,
+          }}
           // rotateAngle prop to Compass Rotate
         >
           <div className='flex flex-col items-center justify-center '>

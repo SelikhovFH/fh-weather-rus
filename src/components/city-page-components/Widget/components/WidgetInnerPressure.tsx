@@ -34,7 +34,7 @@ const WidgetInnerPressure: FC<WidgetPressureProps> = ({ pressureData }) => {
         </div>
       </div>
       <div className='-mt-4 font-light text-2xl text-center font-Open-Sans'>
-        {pressureData} <br /> hpa
+        {pressureData} <br /> hPa
       </div>
     </div>
   );
