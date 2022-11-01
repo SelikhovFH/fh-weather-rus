@@ -40,7 +40,11 @@ const CityPage: FC = () => {
         weatherDescription={weatherExample?.current?.weather[0].description}
         image={(placeInfo as GooglePlaceInfo)?.photoUrl}
       />
-      <HourlyForecast />
+      <HourlyForecast
+        sunset={weatherExample?.current?.sunset}
+        sunrise={weatherExample?.current?.sunrise}
+        hourForecast={weatherExample?.hourly}
+      />
       <Widgets />
       {/* <Tooltip /> */}
       {/* <GraphSwitcher /> */}

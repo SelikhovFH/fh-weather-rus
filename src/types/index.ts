@@ -77,6 +77,28 @@ export interface CityTitleProps {
   weatherDescription: string;
 }
 
+export interface HourForecast {
+  dt: number;
+  temp: number;
+  weather: {
+    id: number;
+    main: string;
+    description: string;
+  }[];
+}
+
+export interface HourlyForecastProps {
+  hourForecast: HourForecast[];
+  sunrise: number;
+  sunset: number;
+}
+
+export interface HourCardProps {
+  icon: string;
+  text: string;
+  time: string;
+}
+
 export interface GooglePlaceInfo {
   name: string;
   lat: number;
