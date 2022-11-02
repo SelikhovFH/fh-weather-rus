@@ -3,11 +3,12 @@ import { WidgetSunriseProps } from 'types';
 import curvedLine from 'components/img/dynamic-widgets-icons/sunrise-time/Vector 11.svg';
 import { getStringTime } from 'helpers';
 
+const getPositionOfLine = (sunrise: number, sunset: number): number => {
+  const oneDay = 86400000;
+  return ((sunset - sunrise) / oneDay) * 100;
+};
+
 const WidgetInnerSunrise: FC<WidgetSunriseProps> = ({ sunrise, sunset }) => {
-  const getPositionOfLine = (sunrise: number, sunset: number): number => {
-    const oneDay = 86400000;
-    return ((sunset - sunrise) / oneDay) * 100;
-  };
   return (
     <div className='flex flex-col'>
       <div className='font-Open-Sans font-light text-7xl text-center mt-4 mb-2'>

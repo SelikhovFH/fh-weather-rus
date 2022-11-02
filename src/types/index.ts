@@ -24,7 +24,6 @@ export interface WidgetCompassProps {
 
 export interface WidgetUvProps {
   uvIndex: number;
-  // movePosition: string;
 }
 
 export interface WidgetSunriseProps {

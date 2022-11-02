@@ -1,19 +1,21 @@
 import React, { FC } from 'react';
 import { WidgetUvProps } from 'types';
 
+const calculateMovePosition = (uvIndex: number): string => {
+  const maxUvIndex = 13;
+  if (uvIndex > 13) return '100%';
+  return `${(uvIndex / maxUvIndex) * 100}%`;
+};
+
+const returnTextDescription = (uvIndex: number): string => {
+  if (uvIndex <= 2) return 'Very low';
+  if (uvIndex <= 5) return 'Low';
+  if (uvIndex <= 7) return 'Normal';
+  if (uvIndex <= 10) return 'High';
+  return 'Very high';
+};
+
 const WidgetInnerUv: FC<WidgetUvProps> = ({ uvIndex }) => {
-  const calculateMovePosition = (uvIndex: number): string => {
-    const maxUvIndex = 13;
-    if (uvIndex > 13) return '100%';
-    return `${(uvIndex / maxUvIndex) * 100}%`;
-  };
-  const returnTextDescription = (uvIndex: number): string => {
-    if (uvIndex <= 2) return 'Very low';
-    if (uvIndex <= 5) return 'Low';
-    if (uvIndex <= 7) return 'Normal';
-    if (uvIndex <= 10) return 'High';
-    return 'Very high';
-  };
   return (
     <div className='flex flex-col items-center mt-8'>
       <div className='font-light text-4.5xl text-start'>
