@@ -100,11 +100,7 @@ export interface WeatherResponseCurrent {
     description: string;
     icon: string;
   }[];
-}
-
-export interface WeatherResponseMin {
-  dt: number;
-  precipitation: number;
+  [propName: string]: any;
 }
 
 export interface WeatherResponseHour {
@@ -127,6 +123,7 @@ export interface WeatherResponseHour {
     icon: string;
   }[];
   pop: number;
+  [propName: string]: any;
 }
 
 export interface WeatherResponseDay {
@@ -166,15 +163,7 @@ export interface WeatherResponseDay {
   pop: number;
   rain: number;
   uvi: number;
-}
-
-export interface WeatherResponseAlerts {
-  sender_name: string;
-  event: string;
-  start: number;
-  end: number;
-  description: string;
-  tags: never[];
+  [propName: string]: any;
 }
 
 export interface WeatherResponse {
@@ -183,8 +172,7 @@ export interface WeatherResponse {
   timezone: string;
   timezone_offset: number;
   current: WeatherResponseCurrent;
-  minutely: WeatherResponseMin[];
   hourly: WeatherResponseHour[];
   daily: WeatherResponseDay[];
-  alerts: WeatherResponseAlerts[];
+  [propName: string]: any;
 }
