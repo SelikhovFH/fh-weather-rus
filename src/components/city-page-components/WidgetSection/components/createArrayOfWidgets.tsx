@@ -1,32 +1,58 @@
 import React from 'react';
 import { widgetTitleIcons } from 'assets/Icons';
 import { WeatherResponseCurrent } from 'types';
-import WidgetInnerStatic from 'components/city-page-components/Widget/components/WidgetInnerStatic';
-import WidgetInnerCompass from 'components/city-page-components/Widget/components/WidgetInnerCompass';
-import WidgetInnerUv from 'components/city-page-components/Widget/components/WidgetInnerUv';
-import WidgetInnerSunrise from 'components/city-page-components/Widget/components/WidgetInnerSunrise';
-import WidgetInnerPressure from 'components/city-page-components/Widget/components/WidgetInnerPressure';
+import WidgetInnerStatic from 'components/city-page-components/WidgetSection/components/Widget/components/WidgetInnerStatic';
+import WidgetInnerCompass from 'components/city-page-components/WidgetSection/components/Widget/components/WidgetInnerCompass';
+import WidgetInnerUv from 'components/city-page-components/WidgetSection/components/Widget/components/WidgetInnerUv';
+import WidgetInnerSunrise from 'components/city-page-components/WidgetSection/components/Widget/components/WidgetInnerSunrise';
+import WidgetInnerPressure from 'components/city-page-components/WidgetSection/components/Widget/components/WidgetInnerPressure';
+
+const feelsLikeGrade = {
+  muchWarmerUpperLimit: -5,
+  littleWarmerUpperLimit: -2,
+  sameUpperLimit: 2,
+  littleColderUpperLimit: 5,
+  // Much colder is upper then 5
+};
+
+const cloudGrade = {
+  clearSkyUpperLimit: 25,
+  fewCloudsUpperLimit: 50,
+  cloudyUpperLimit: 75,
+  mainlyCloudyUpperLimit: 100,
+  // Max value in response is 100
+};
+
+const visibilityGrade = {
+  minVisUpperLimit: 3333,
+  averageVisUpperLimit: 6666,
+  maxVisUpperLimit: 10000,
+  // Max value in response is 10000
+};
 
 const getFeelsLikeText = (temp: number, feelsLike: number): string => {
-  if (temp - feelsLike < -5) return 'Feels much warmer';
-  if (temp - feelsLike < -2) return 'Feels a little warmer';
-  if (temp - feelsLike < 2) return 'Feels the same';
-  if (temp - feelsLike < 5) return 'Feels a little colder';
+  if (temp - feelsLike < feelsLikeGrade.muchWarmerUpperLimit)
+    return 'Feels much warmer';
+  if (temp - feelsLike < feelsLikeGrade.littleWarmerUpperLimit)
+    return 'Feels a little warmer';
+  if (temp - feelsLike < feelsLikeGrade.sameUpperLimit) return 'Feels the same';
+  if (temp - feelsLike < feelsLikeGrade.littleColderUpperLimit)
+    return 'Feels a little colder';
   return 'Feels much colder';
 };
 
 const getCloudText = (cloudPercentage: number): string => {
-  // Max value in response is 100
-  if (cloudPercentage < 25) return 'Clear sky';
-  if (cloudPercentage < 50) return 'Few clouds';
-  if (cloudPercentage < 75) return 'Cloudy';
+  if (cloudPercentage < cloudGrade.clearSkyUpperLimit) return 'Clear sky';
+  if (cloudPercentage < cloudGrade.fewCloudsUpperLimit) return 'Few clouds';
+  if (cloudPercentage < cloudGrade.cloudyUpperLimit) return 'Cloudy';
   return 'Mainly cloudy';
 };
 
 const getVisibilityText = (visibility: number): string => {
-  // Max value in response is 10000
-  if (visibility < 3333) return 'Minimum visibility';
-  if (visibility < 6666) return 'Average visibility';
+  if (visibility < visibilityGrade.minVisUpperLimit)
+    return 'Minimum visibility';
+  if (visibility < visibilityGrade.averageVisUpperLimit)
+    return 'Average visibility';
   return 'Maximum visibility';
 };
 

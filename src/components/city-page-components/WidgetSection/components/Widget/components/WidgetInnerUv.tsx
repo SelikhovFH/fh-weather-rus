@@ -1,17 +1,24 @@
 import React, { FC } from 'react';
 import { WidgetUvProps } from 'types';
 
+const uvIndexGrade = {
+  max: 13,
+  high: 10,
+  normal: 7,
+  low: 5,
+  veryLow: 2,
+};
+
 const calculateMovePosition = (uvIndex: number): string => {
-  const maxUvIndex = 13;
-  if (uvIndex > 13) return '100%';
-  return `${(uvIndex / maxUvIndex) * 100}%`;
+  if (uvIndex > uvIndexGrade.max) return '100%';
+  return `${(uvIndex / uvIndexGrade.max) * 100}%`;
 };
 
 const returnTextDescription = (uvIndex: number): string => {
-  if (uvIndex <= 2) return 'Very low';
-  if (uvIndex <= 5) return 'Low';
-  if (uvIndex <= 7) return 'Normal';
-  if (uvIndex <= 10) return 'High';
+  if (uvIndex <= uvIndexGrade.veryLow) return 'Very low';
+  if (uvIndex <= uvIndexGrade.low) return 'Low';
+  if (uvIndex <= uvIndexGrade.normal) return 'Normal';
+  if (uvIndex <= uvIndexGrade.high) return 'High';
   return 'Very high';
 };
 

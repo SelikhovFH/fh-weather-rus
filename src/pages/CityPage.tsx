@@ -4,7 +4,7 @@ import Subscription from 'components/Subscription';
 import Footer from 'components/Footer';
 import Tooltip from 'components/city-page-components/Tooltip';
 import GraphSwitcher from 'components/city-page-components/GraphSwitcher';
-import Widgets from 'components/city-page-components/Widgets';
+import WidgetSection from 'components/city-page-components/WidgetSection';
 import CityTitle from 'components/city-page-components/CityTitle';
 import HourlyForecast from 'components/city-page-components/HourlyForecast';
 import { useParams } from 'react-router-dom';
@@ -41,7 +41,7 @@ const CityPage: FC = () => {
         image={(placeInfo as GooglePlaceInfo)?.photoUrl}
       />
       <HourlyForecast />
-      <Widgets />
+      <WidgetSection />
       {/* <Tooltip /> */}
       {/* <GraphSwitcher /> */}
       <Subscription />
