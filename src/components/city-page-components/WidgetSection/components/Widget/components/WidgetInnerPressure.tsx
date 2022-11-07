@@ -3,14 +3,15 @@ import pressureEllipse from 'components/img/dynamic-widgets-icons/pressure/Ellip
 import pressureArrow from 'components/img/dynamic-widgets-icons/pressure/Arrow.svg';
 import { WidgetPressureProps } from 'types';
 
+const calculateAngle = (amount: number): number => {
+  const minPressure = 870;
+  const maxPressure = 1085;
+  if (amount < minPressure) return -120;
+  if (amount > maxPressure) return 120;
+  return amount - minPressure - 110;
+};
+
 const WidgetInnerPressure: FC<WidgetPressureProps> = ({ pressureData }) => {
-  const calculateAngle = (amount: number): number => {
-    const minPressure = 870;
-    const maxPressure = 1085;
-    if (amount < minPressure) return -120;
-    if (amount > maxPressure) return 120;
-    return amount - minPressure - 110;
-  };
   return (
     <div className='mt-10 flex flex-col items-center h-full'>
       <div className='relative w-2/3 h-2/5'>
@@ -34,7 +35,7 @@ const WidgetInnerPressure: FC<WidgetPressureProps> = ({ pressureData }) => {
         </div>
       </div>
       <div className='-mt-4 font-light text-2xl text-center font-Open-Sans'>
-        {pressureData} <br /> hpa
+        {pressureData} <br /> hPa
       </div>
     </div>
   );

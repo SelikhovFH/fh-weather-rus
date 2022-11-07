@@ -13,7 +13,7 @@ const CityTitle: FC<CityTitleProps> = ({
   return (
     <div
       style={{ backgroundImage: `url('${image})'` }}
-      className="w-full flex justify-between items-end py-24 px-24 rounded-primary font-Mulish relative bg-[url('/src/components/img/location-bg.png')] bg-center bg-cover mb-20">
+      className='w-full flex justify-between items-end py-24 px-24 rounded-primary font-Mulish relative bg-center bg-cover mb-20'>
       <div className='bg-blured-grey backdrop-blur-sm rounded-primary py-8 px-14 font-light text-8xl leading-tight'>
         <div className='mb-4'>{placeName}</div>
         {/* Default is Celsius or Fahrenheit?? */}
