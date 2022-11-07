@@ -1,9 +1,11 @@
-import { exit } from 'process';
-
 export interface ButtonProps {
   text: string;
   selected?: boolean;
   disabled?: boolean;
+}
+
+export interface WidgetSectionProps {
+  currentWeather: WeatherResponseCurrent;
 }
 
 export interface WidgetProps {
