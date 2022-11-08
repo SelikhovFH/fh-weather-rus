@@ -56,11 +56,11 @@ export const widgetSunriseIcons: {
   ),
 );
 
-export const graphSwitcherIcons: {
+export const chartSwitcherIcons: {
   [propName: string]: string;
 } = importAll(
   require.context(
-    './service-icons/graph-switcher-icons',
+    './service-icons/chart-switcher-icons',
     false,
     /\.(png|jpe?g|svg)$/,
   ),

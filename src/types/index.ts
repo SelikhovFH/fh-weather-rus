@@ -184,7 +184,7 @@ export interface WeatherResponseDay {
   }[];
   clouds: number;
   pop: number;
-  rain: number;
+  rain?: number;
   uvi: number;
   [propName: string]: any;
 }
@@ -198,4 +198,17 @@ export interface WeatherResponse {
   hourly: WeatherResponseHour[];
   daily: WeatherResponseDay[];
   [propName: string]: any;
+}
+
+export interface ChartSwitcherProps {
+  selectedChart: number;
+  setSelectedChart: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export interface ChartSectionProps {
+  dailyForecast: WeatherResponseDay[];
+}
+
+export interface ChartProps {
+  dailyForecast: WeatherResponseDay[];
 }

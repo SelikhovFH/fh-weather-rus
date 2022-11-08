@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import Header from 'components/Header';
 import Subscription from 'components/Subscription';
 import Footer from 'components/Footer';
-import Tooltip from 'components/city-page-components/Tooltip';
-import GraphSwitcher from 'components/city-page-components/GraphSwitcher';
+import Tooltip from 'components/city-page-components/ChartSection/components/Tooltip';
+import GraphSwitcher from 'components/city-page-components/ChartSection/components/ChartSwitcher';
 import WidgetSection from 'components/city-page-components/WidgetSection';
 import CityTitle from 'components/city-page-components/CityTitle';
 import HourlyForecast from 'components/city-page-components/HourlyForecast';
@@ -13,6 +13,7 @@ import { PlacesService } from 'services/places.service';
 import { GooglePlaceInfo } from 'types';
 
 import { weatherExample } from 'services/weather.service';
+import ChartSection from 'components/city-page-components/ChartSection';
 
 const CityPage: FC = () => {
   const { placeId } = useParams<{ placeId: string }>();
@@ -46,8 +47,7 @@ const CityPage: FC = () => {
         hourForecast={weatherExample?.hourly}
       />
       <WidgetSection currentWeather={weatherExample?.current} />
-      {/* <Tooltip /> */}
-      {/* <GraphSwitcher /> */}
+      <ChartSection dailyForecast={weatherExample?.daily}/>
       <Subscription />
       <Footer />
     </div>
