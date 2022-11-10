@@ -212,3 +212,11 @@ export interface ChartSectionProps {
 export interface ChartProps {
   dailyForecast: WeatherResponseDay[];
 }
+
+export interface TooltipProps {
+  dailyForecast: WeatherResponseDay[];
+  datum?: { x?: number; y?: number };
+  x?: number;
+  y?: number;
+  center?: any;
+}
