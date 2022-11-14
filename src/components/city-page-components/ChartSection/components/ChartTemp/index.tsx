@@ -1,5 +1,5 @@
-import { getDay } from 'helpers';
 import React, { FC } from 'react';
+import { getDay } from 'helpers';
 import { ChartProps } from 'types';
 import {
   VictoryChart,
@@ -8,8 +8,15 @@ import {
   VictoryScatter,
   VictoryTooltip,
   VictoryBrushContainer,
+  LineSegment,
+  Background,
+  Line,
 } from 'victory';
 import Tooltip from 'components/city-page-components/ChartSection/components/Tooltip';
+import { weatherIcons } from 'assets/Icons';
+
+const getGridColor = (y: any): string =>
+  y.index === 0 || y.index === 6 ? 'transparent' : '#ECECEC';
 
 const ChartTemp: FC<ChartProps> = ({ dailyForecast }) => {
   const data = dailyForecast
@@ -57,14 +64,27 @@ const ChartTemp: FC<ChartProps> = ({ dailyForecast }) => {
       </svg>
 
       <VictoryChart
-        // containerComponent={
-        //   <VictoryBrushContainer
-        //     style={{overflow: 'hidden'}}
-        //     allowResize={false}
-        //     brushDomain={{ x: [dailyForecast[0].dt, dailyForecast[6].dt] }}
-        //     brushStyle={{ fill: 'transparent', stroke: '#ECECEC', rx: '15' }}
-        //   />
+        // backgroundComponent={
+        //   <foreignObject>
+        //     <div className='bg-black'></div>
+        //   </foreignObject>
         // }
+        backgroundComponent={
+          <rect
+            vectorEffect='non-scaling-stroke'
+            role='presentation'
+            shapeRendering='auto'
+            x='50'
+            y='50'
+            width='350'
+            height='200'
+            stroke='#ECECEC'
+            rx={15}
+            fill='transparent'></rect>
+        }
+        style={{
+          background: {},
+        }}
         domainPadding={{ y: 25 }}>
         <VictoryAxis
           dependentAxis
@@ -79,21 +99,16 @@ const ChartTemp: FC<ChartProps> = ({ dailyForecast }) => {
             },
           }}
         />
+
         <VictoryAxis
-          // gridComponent={
-          //   <LineSegment
-          //     lineComponent={<Line style={{ width: '50px' }} />}
-          //     style={{
-          //       stroke: '#ECECEC',
-          //       strokeWidth: 0.5,
-          //     }}
-          //   />
-          // }
           tickFormat={tick => getDay(tick).toUpperCase()}
           tickValues={data.map(day => day.x)}
           style={{
-            grid: { stroke: '#ECECEC', strokeWidth: 0.5 },
-            axis: { stroke: '#transparent', strokeWidth: 0.5 },
+            grid: {
+              stroke: (y: any) => getGridColor(y),
+              strokeWidth: 0.5,
+            },
+            axis: { stroke: 'transparent', strokeWidth: 0.5 },
             tickLabels: {
               fill: '#fff',
               fontSize: 8,
@@ -114,6 +129,19 @@ const ChartTemp: FC<ChartProps> = ({ dailyForecast }) => {
           data={data}
         />
         <VictoryScatter
+          containerComponent={
+            <rect
+              vectorEffect='non-scaling-stroke'
+              role='presentation'
+              shapeRendering='auto'
+              x='50'
+              y='50'
+              width='350'
+              height='200'
+              stroke='#ECECEC'
+              rx={15}
+              fill='transparent'></rect>
+          }
           labels={() => ''}
           labelComponent={
             <VictoryTooltip
@@ -121,7 +149,10 @@ const ChartTemp: FC<ChartProps> = ({ dailyForecast }) => {
               pointerOrientation='bottom'
             />
           }
-          style={{ data: { fill: '#fff' } }}
+          // dataComponent={}
+          style={{
+            data: { fill: '#fff' },
+          }}
           size={3}
           data={data}
         />
