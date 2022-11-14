@@ -1,19 +1,17 @@
 import React, { FC } from 'react';
+import { useParams } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import { GooglePlaceInfo } from 'types';
 import Header from 'components/Header';
 import Subscription from 'components/Subscription';
 import Footer from 'components/Footer';
-import Tooltip from 'components/city-page-components/ChartSection/components/Tooltip';
-import GraphSwitcher from 'components/city-page-components/ChartSection/components/ChartSwitcher';
 import WidgetSection from 'components/city-page-components/WidgetSection';
+import { PlacesService } from 'services/places.service';
 import CityTitle from 'components/city-page-components/CityTitle';
 import HourlyForecast from 'components/city-page-components/HourlyForecast';
-import { useParams } from 'react-router-dom';
-import { useQuery } from 'react-query';
-import { PlacesService } from 'services/places.service';
-import { GooglePlaceInfo } from 'types';
+import ChartSection from 'components/city-page-components/ChartSection';
 
 import { weatherExample } from 'services/weather.service';
-import ChartSection from 'components/city-page-components/ChartSection';
 
 const CityPage: FC = () => {
   const { placeId } = useParams<{ placeId: string }>();
@@ -47,7 +45,7 @@ const CityPage: FC = () => {
         hourForecast={weatherExample?.hourly}
       />
       <WidgetSection currentWeather={weatherExample?.current} />
-      <ChartSection dailyForecast={weatherExample?.daily}/>
+      <ChartSection dailyForecast={weatherExample?.daily} />
       <Subscription />
       <Footer />
     </div>
